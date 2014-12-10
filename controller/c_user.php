@@ -1,7 +1,8 @@
 <?php
 	class c_user{
 		public function invoke(){
-			switch ($_GET['action']) {
+			GLOBAL $action;
+			switch ($action) {
 				case 'signup_page':
 				//	require_once('model/m_user.php');
 				//	$this->model = new m_user();
