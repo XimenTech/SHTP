@@ -1,15 +1,15 @@
 <?php
 
-	class m_item{
+	class m_user{
 		public function signup(){
-			require_once('includes/user.class.php');
+			require_once('include/user.class.php');
 
 			//获取数据库连接变量
-			require_once('includes/connectvars.php');
+			require_once('include/connectvars.php');
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 
-			if(isset($_POST['submit'])){
+			
 				$email		=	$_POST['email'];
 				$password	=	$_POST['password'];
 				$query = "SELECT * FROM shtp_user WHERE user_email = '$email'";
@@ -18,8 +18,7 @@
 				if(mysqli_num_rows($data) == 0){
 					//验证用户名是否存在
 
-					$query = "INSERT INTO shtp_user (user_email,user_password)"
-						"VALUES ('$email','$password')";
+					$query = "INSERT INTO shtp_user (user_email,user_password) VALUES ('$email','$password')";
 					//新用户写入数据库
 
 					$result = mysqli_query($dbc,$query)
@@ -31,19 +30,19 @@
 				}else{
 					echo '用户名已存在';
 				}		
-			}
+
 			mysqli_close($dbc);
 		}
 		
 		public function login(){
-			require_once('includes/user.class.php');
+			require_once('include/user.class.php');
 
 			//获取数据库连接变量
-			require_once('includes/connectvars.php');
+			require_once('include/connectvars.php');
 				
 
 
-			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 			$email = $_POST['email'];
 			$password = $_POST['password'];
@@ -75,9 +74,8 @@
 				
 
 					//header('Location: ../index.php');
-				}else{
-					$error_msg = '用户名或密码错误';
-				}
+			}else{
+				$error_msg = '用户名或密码错误';
 			}
 			mysqli_close($dbc);
 		}
@@ -87,13 +85,13 @@
 		}
 
 		public function edit_profile(){
-			require_once('includes/user.class.php');
+			require_once('include/user.class.php');
 
 			//获取数据库连接变量
-			require_once('includes/connectvars.php');
+			require_once('include/connectvars.php');
 
 
-			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 
 			$authority	=	$_POST['authority'];

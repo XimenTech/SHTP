@@ -1,16 +1,16 @@
 <?php
 	class user{
 		public 	$user_id,
-		public  $user_authority,
-		public  $user_status,
-		public  $user_avatar,
-		public  $user_email,
-		public  $user_name,
-		public  $user_password,
-		public  $user_qq,
-		public  $user_phone,
-		public  $user_address,
-		public  $user_reg_date;
+				$user_authority,
+				$user_status,
+				$user_avatar,
+				$user_email,
+				$user_name,
+				$user_password,
+				$user_qq,
+				$user_phone,
+				$user_address,
+				$user_reg_date;
 
 		public function __construct($email,$password,$id,$authority=1, $status=1, $avatar, $name="", $qq="", $phone="", $address="", $reg_date=""){
 			$this->user_id			=	$id;
