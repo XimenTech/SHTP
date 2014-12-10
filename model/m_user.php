@@ -71,11 +71,12 @@
 				setcookie('user_phone',$row['user_phone']);
 				setcookie('user_address',$row['user_address']);
 				setcookie('user_reg_date',$row['user_reg_date']);
-				
+				echo "登陆成功\n";
 
 					//header('Location: ../index.php');
 			}else{
 				$error_msg = '用户名或密码错误';
+				echo "登陆失败";
 			}
 			mysqli_close($dbc);
 		}
@@ -94,6 +95,7 @@
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 
+			//$email		=	$_POST['email'];
 			$authority	=	$_POST['authority'];
 			$status		=	$_POST['status'];
 			$avatar		=	$_POST['avatar'];
