@@ -18,7 +18,8 @@
 				if(mysqli_num_rows($data) == 0){
 					//验证用户名是否存在
 
-					$query = "INSERT INTO shtp_user (user_email,user_password)";
+					$query = "INSERT INTO shtp_user (user_email,user_password)"
+						"VALUES ('$email','$password')";
 					//新用户写入数据库
 
 					$result = mysqli_query($dbc,$query)
