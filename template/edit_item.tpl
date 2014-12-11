@@ -3,7 +3,7 @@
 	<head>
 		<title>主页</title>
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
-		<link href="resource/css/view_item.css" type="text/css" rel="stylesheet">
+		<link href="resource/css/edit_item.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
 		<!-- 页面顶部板块 -->
