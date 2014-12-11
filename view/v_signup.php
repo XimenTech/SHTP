@@ -5,4 +5,6 @@
 
    $signup = new smarty();
 
+   $signup->display("template/header.tpl");
    $signup->display("template/signup.tpl");
+   $signup->display("template/footer.tpl");

@@ -8,7 +8,7 @@
     $item_status = '1';
     $item_img = 'resource\banana.jpg';
     $item_type = 'food';
-    $item_detail = 'dilicious fruit';
+    $item_detail = 'delicious fruit';
     $item_owner_qq = '**********';
     $item_owner_phone = '**********';
     $item_owner_address = '*********';
