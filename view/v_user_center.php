@@ -33,4 +33,6 @@
 	$user_center->assign("phone",$phone);
 	$user_center->assign("address",$address);
 
+	$user_center->display("template/header.tpl");
 	$user_center->display("template/user_center.tpl");
+	$user_center->display("template/footer.tpl");

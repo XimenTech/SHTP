@@ -5,4 +5,6 @@
 
    $login = new smarty();
 
+   $login->display("template/header.tpl");
    $login->display("template/login.tpl");
+   $login->display("template/footer.tpl");
