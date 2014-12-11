@@ -3,7 +3,7 @@
 		<title>主页</title>
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/style_main.css" type="text/css" rel="stylesheet">
-		<script type="text/javascript" src="resource/js/js_main.js"></script>
+		<script type="text/javascript" src="resource/script/js_main.js"></script>
 	</head>
 	<body>
 		<!-- 页面顶部板块 -->
@@ -47,18 +47,155 @@
 			</div>
 			
 			<div id="hot">
-				<button onclick="left()"><</button>
-				<b>热门推荐</b>
-				<button onclick="right()">></button>	
-				<div id="page1" style="display:block">1</div>
-				<div id="page2" style="display:none">2</div>
-				<div id="page3" style="display:none">3</div>
+				<div id="hot_title">
+					<button onclick="left()"><</button>
+					<b style="color:#333;font-size:1em">热门推荐</b>
+					<button onclick="right()">></button>
+				</div>	
+				<div id="page1" style="display:block">
+					<b id="page">1/3</b>
+					<div class="hot_item">
+							<img class="hot_img" src="resource/image/recently.png">
+							<p>商品名称</p>
+							<p>价格</p>
+					</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+					</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+					</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p> 
+					</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+					</div>
+				</div>
+				<div id="page2" style="display:none">
+					<b id="page">2/3</b>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+
+					</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+				</div>
+				<div id="page3" style="display:none">
+					<b id="page">3/3</b>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+					<div class="hot_item">
+						<img class="hot_img" src="resource/image/recently.png">
+						<p>商品名称</p>
+						<p>价格</p>
+				</div>
+			</div>
 			</div>
 					
 			<div id="recently">
-				<b>最近浏览</b>
+				<div>
+				<b style="color:#333;font-size:1em">最近浏览</b>
+				</div>
 			</div>
-			<div id="new_item"><b>最近上架</b></div>
+			<div id="new">
+				<div style="height:1em;"><b id="new_title">最新上架</b></div>
+				<br>
+				<div class="new_item">
+					<div style="width:20%; height:100%;">
+					<img class="new_img" src="resource/image/recently.png">
+					</div>
+					<div style="padding-left:1em;">
+						商品名称<br>
+						detail
+					</div>
+					<div style="padding-left:5em;">
+						价格
+					</div>
+				</div>
+				<div class="new_item">
+					<div style="width:20%; height:100%;">
+					<img class="new_img" src="resource/image/recently.png">
+					</div>
+					<div style="padding-left:1em;">
+						商品名称<br>
+						detail
+					</div>
+					<div style="padding-left:5em;">
+						价格
+					</div>
+				</div>
+				<div class="new_item">
+					<div style="width:20%; height:100%;">
+					<img class="new_img" src="resource/image/recently.png">
+					</div>
+					<div style="padding-left:1em;">
+						商品名称<br>
+						detail
+					</div>
+					<div style="padding-left:5em;">
+						价格
+					</div>	
+				</div>
+				<div class="new_item">
+					<div style="width:20%; height:100%;">
+					<img class="new_img" src="resource/image/recently.png">
+					</div>
+					<div style="padding-left:1em;">
+						商品名称<br>
+						detail
+					</div>
+					<div style="padding-left:5em;">
+						价格
+					</div>
+				</div>
+			</div>
 			
 		</div>
 
