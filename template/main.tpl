@@ -3,6 +3,7 @@
 		<title>主页</title>
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/style_main.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="resource/js/js_main.js"></script>
 	</head>
 	<body>
 		<!-- 页面顶部板块 -->
@@ -46,11 +47,14 @@
 			</div>
 			
 			<div id="hot">
+				<button onclick="left()"><</button>
 				<b>热门推荐</b>
-				<div id="page1"></div>
-				<div id="page2"></div>
-				<div id="page3"></div>
+				<button onclick="right()">></button>	
+				<div id="page1" style="display:block">1</div>
+				<div id="page2" style="display:none">2</div>
+				<div id="page3" style="display:none">3</div>
 			</div>
+					
 			<div id="recently">
 				<b>最近浏览</b>
 			</div>
