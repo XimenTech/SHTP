@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>主页</title>
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
-		<link href="resource/css/style_main.css" type="text/css" rel="stylesheet">
-		<script type="text/javascript" src="resource/js/js_main.js"></script>
+		<link href="resource/css/login.css" type="text/css" rel="stylesheet">
+		<script src="resource/script/login.js"></script>
 	</head>
 	<body>
 		<!-- 页面顶部板块 -->
@@ -32,36 +33,23 @@
 			</form>
 		</div>
 		</div>
-
+		
+		<!-- 页面主要内容板块 -->
 		<div id = "content">
-			<div id="item_menu">
-				<b>
-				<div class="button1">手机、数码</div>
-				<div class="button1">电器</div>
-				<div class="button1">交通工具</div>
-				<div class="button1">书籍</div>
-				<div class="button1">服饰箱包</div>
-				<div class="button1">游戏账号</div>
-				<div class="button1">其他</div>
-				</b>
-			</div>
-			
-			<div id="hot">
-				<button onclick="left()"><</button>
-				<b>热门推荐</b>
-				<button onclick="right()">></button>	
-				<div id="page1" style="display:block">1</div>
-				<div id="page2" style="display:none">2</div>
-				<div id="page3" style="display:none">3</div>
-			</div>
-					
-			<div id="recently">
-				<b>最近浏览</b>
-			</div>
-			<div id="new_item"><b>最近上架</b></div>
-			
+			<form action="test_login_rslt.php" method="post" name="login_form" onsubmit="return check()">
+				<input type = "hidden" name="controller" value = "c_user"/>
+				<input type = "hidden" name="action" value = "login"/>
+  				<p id="User_email">请输入E-mail：<input type="text" name="email" /></p>
+  				<p id="User_password">请输入密码&nbsp： <input type="password" name="password" /></p>
+				<br>
+  				<input type="submit" value="马上登录" />
+			</form>
 		</div>
 
+	
+
+		</div>
+		<!-- 页面底部板块 -->
 		<div id = "bottom">
 			<div id = "bottom_item_aboutus"><a class = "menu_list">关于我们</a></div>
 			<div id = "bottom_item_help"><a class = "menu_list">帮助中心</a></div>
@@ -69,9 +57,11 @@
 			<div id = "bottom_item_claim"><a class = "menu_list">免责声明</a></div>
 			<div id = "bottom_item_advice"><a class = "menu_list">我要提意见</a></div>
 		</div>
-		
+		<!-- 页面尾部板块 -->
 		<div id = "footer">
 			<p><font size="2">版权所有     西门工作室&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp制作团队     西门工作室</font></p>
 		</div>
 	</body>
 </html>
+
+
