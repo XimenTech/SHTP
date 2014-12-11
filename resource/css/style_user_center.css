@@ -1,0 +1,34 @@
+
+#content{
+	position: relative;
+	width: 85em;
+	height: 25em;
+}
+
+#content_menu{
+	position: relative;
+	width: 12em;
+	height: 23em;
+	background-color: #dddddd;
+	border: 0.07em solid #777;
+	margin-left: 15em;
+}
+
+
+
+#content_menu_list{
+	position: relative;
+	width: 12em;
+	height: 2em;
+	margin-top: 0.5em;	
+
+}
+
+#content_detail{
+	position: relative;
+	width: 45em;
+	height: 23em;
+	margin-left: 2em;
+	background-color: #dddddd;
+	border: 0.07em solid #777;
+}
