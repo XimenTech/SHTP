@@ -1,7 +1,7 @@
 <?php
 	class c_item{
 		public function invoke(){
-			switch ($_GET['action']) {
+			switch ($action) {
 				case 'additem':
 					require_once('model/m_item.php');
 					$this->model = new m_item();
