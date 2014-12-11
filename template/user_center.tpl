@@ -37,19 +37,47 @@
 		<div id = "content">
 			<!-- 主要内容板块菜单 -->
 			<div id = "content_menu">	
-				<div id = "content_menu_list"><a class="menu_list">我的二手</a></div>
-				<div id = "content_menu_list"><a class="menu_list">查看并修改个人信息</a></div>
-				<div id = "content_menu_list"><a class="menu_list">我的收藏</a></div>
-				<div id = "content_menu_list"><a class="menu_list">商品管理</a></div>
-				<div id = "content_menu_list"><a class="menu_list">我的求购</a></div>
-				<div id = "content_menu_list"><a class="menu_list">我的消息</a></div>
-				<div id = "content_menu_list"><a class="menu_list">管理员</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='block';content_detail_list2.style.display='none';content_detail_list3.style.display='none';content_detail_list4.style.display='none';content_detail_list5.style.display='none';content_detail_list6.style.display='none';
+				content_detail_list7.style.display='none';">我的二手</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='none';content_detail_list2.style.display='block';content_detail_list3.style.display='none';content_detail_list4.style.display='none';content_detail_list5.style.display='none';content_detail_list6.style.display='none';
+				content_detail_list7.style.display='none';">查看并修改个人信息</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='none';content_detail_list2.style.display='none';content_detail_list3.style.display='block';content_detail_list4.style.display='none';content_detail_list5.style.display='none';content_detail_list6.style.display='none';
+				content_detail_list7.style.display='none';">我的收藏</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='none';content_detail_list2.style.display='none';content_detail_list3.style.display='none';content_detail_list4.style.display='block';content_detail_list5.style.display='none';content_detail_list6.style.display='none';
+				content_detail_list7.style.display='none';">商品管理</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='none';content_detail_list2.style.display='none';content_detail_list3.style.display='none';content_detail_list4.style.display='none';content_detail_list5.style.display='block';content_detail_list6.style.display='none';
+				content_detail_list7.style.display='none';">我的求购</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='none';content_detail_list2.style.display='none';content_detail_list3.style.display='none';content_detail_list4.style.display='none';content_detail_list5.style.display='none';content_detail_list6.style.display='block';
+				content_detail_list7.style.display='none';">我的消息</a></div>
+				<div id = "content_menu_list"><a class="menu_list" onmousedown="content_detail_list1.style.display='none';content_detail_list2.style.display='none';content_detail_list3.style.display='none';content_detail_list4.style.display='none';content_detail_list5.style.display='none';content_detail_list6.style.display='none';
+				content_detail_list7.style.display='block';">管理员</a></div>
 				<div id = "content_menu_list"><a class="menu_list">返回主页</a></div>
 			</div>
 			<!-- 主要内容板块详细信息 -->
 			<div id = "content_detail">
-				
+				<div id = "content_detail_list1" >
+					我的二手信息板块
+				</div>
+				<div id = "content_detail_list2">
+					个人信息板块
+				</div>
+				<div id = "content_detail_list3">
+					我的收藏板块
+				</div>
+				<div id = "content_detail_list4">
+					商品管理板块
+				</div>
+				<div id = "content_detail_list5">
+					我的求购信息板块
+				</div>
+				<div id = "content_detail_list6">
+					我的消息板块
+				</div>
+				<div id = "content_detail_list7">
+					管理员板块
+				</div>
 			</div>
+				
 
 		</div>
 		<!-- 页面底部板块 -->
