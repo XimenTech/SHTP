@@ -1,6 +1,7 @@
 <?php
 	class c_witem{
 		public function invoke(){
+			GLOBAL $action;
 			switch ($action) {
 				case 'addwitem':
 					require_once('model/m_witem.php');

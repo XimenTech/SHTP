@@ -1,6 +1,7 @@
 <?php
 	class c_item{
 		public function invoke(){
+			GLOBAL $action;
 			switch ($action) {
 				case 'additem':
 					require_once('model/m_item.php');

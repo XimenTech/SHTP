@@ -14,9 +14,9 @@
 			   $item_viewtime,
 			   $item_dttm;
 
-		public function __construct($item_id,$user_id,$status,$img,$type,$title,$detail,$price,$owner_qq,$owner_phone,$owner_address,$viewtime,$dttm){ 
-			$this->item_id 	=	$item_id;
-			$this->user_id 	=	$user_id;
+		public function __construct($status=1,$img,$type,$title,$detail,$price,$owner_qq,$owner_phone,$owner_address,$viewtime,$dttm){ 
+			$this->item_id 		=	$item_id;
+			$this->user_id 		=	$user_id;
 			$this->item_status 	=	$status;
 			$this->item_img 	=	$img;
 			$this->item_type 	=	$type;
@@ -29,4 +29,3 @@
 			$this->item_dttm 	=	$dttm;
 		}
 	}	
-?>
