@@ -29,5 +29,7 @@
 	$viewitem->assign("item_viewtime",$item_viewtime);
 	$viewitem->assign("item_dttm",$item_dttm);
 	$viewitem->assign("item_price",$item_price );
-
+    
+    $viewitem->display("template/header.tpl");
 	$viewitem->display("template/view_item.tpl");
+	$viewitem->display("template/footer.tpl");

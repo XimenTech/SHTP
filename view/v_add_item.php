@@ -15,4 +15,7 @@
 	$viewitem->assign("item_detail",$item_detail);
 	$viewitem->assign("item_img",$item_img);
 	$viewitem->assign("item_price",$item_price);
+
+    $viewitem->display("template/header.tpl");
 	$viewitem->display("template/add_item.tpl");
+	$viewitem->display("template/footer.tpl");

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     
     <head>
@@ -9,9 +9,9 @@
         <link href="resource/css/add_item.css" type="text/css" rel="stylesheet">
     </head>
     
-    <body>
+    <body> -->
         <!-- 页面顶部板块 -->
-        <div id="top">
+       <!--  <div id="top">
             <div id="top_item_login">
                 <a class="menu_list">
                     亲，请登录！
@@ -37,15 +37,15 @@
                     快速发布
                 </a>
             </div>
-        </div>
+        </div> -->
         <!-- 主板块 -->
-        <div id="main">
+        <!-- <!-- <div id="main">
             <!-- 页面logo板块 -->
-            <div id="main_logo">
+           <!--  <div id="main_logo">
                 <img src="resource/image/logo.png">
             </div>
             <!-- 页面搜索板块 -->
-            <div id="main_search" style="background-image:url(resource/image/search.png)">
+           <!--  <div id="main_search" style="background-image:url(resource/image/search.png)">
                 <div id="main_search_item1">
                     <b>
                         寻宝:
@@ -62,10 +62,10 @@
                         商品种类
                 </div>
                 </form>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> --> 
         <!-- 页面主要内容板块 -->
-        <div id="content">
+        <div id="content_add_item">
             <form>
             <div id="basic_info">
                 <p>商品名称:
@@ -103,7 +103,7 @@
             </form>
         </div>
         <!-- 页面底部板块 -->
-        <div id="bottom">
+        <!-- <div id="bottom">
             <div id="bottom_item_aboutus">
                 <a class="menu_list">
                     关于我们
@@ -129,9 +129,9 @@
                     我要提意见
                 </a>
             </div>
-        </div>
+        </div> -->
         <!-- 页面尾部板块 -->
-        <div id="footer">
+       <!--  <div id="footer">
             <p>
                 <font size="2">
                     版权所有 西门工作室&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp制作团队 西门工作室
@@ -140,4 +140,4 @@
         </div>
     </body>
 
-</html>
+</html> -->
