@@ -1,0 +1,48 @@
+#content{
+	/*background-color: lightgreen;*/
+    position: relative;
+	width: 85em;
+	height:55em;
+}
+
+#basic_info{
+    
+    background-co/*lor: lightpink;*/
+    position: relative;
+	width: 85em;
+	height:7em;
+
+}
+
+#detial{
+	
+	margin-left: -5.5em;
+	/*background-color: lightblue;*/
+    position: relative;
+	width: 85em;
+	height:3em;
+}
+
+#descreption{
+   
+	/*background-color: lightyellow;*/
+    position: relative;
+	width: 85em;
+	height:12em;
+}
+
+#picture{
+	margin-left: -5.5em;
+	/*background-color: white;*/
+    position: relative;
+	width: 85em;
+	height:2em;
+}
+
+#pic{
+	
+	/*background-color: blue;*/
+    position: relative;
+	width: 85em;
+	height:25em;
+}
