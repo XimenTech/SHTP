@@ -3,7 +3,7 @@
 	class m_item{ 
 		public function addwitem(){
 			require_once('include/witem.class.php');
-			require_once('include/connectvar.php'); 
+			require_once('include/connectvars.php'); 
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			if (!$con)
@@ -23,7 +23,7 @@
 
 		public function editwitem(){
 		 	require_once('include/witem.class.php');
-			require_once('include/connectvar.php');
+			require_once('include/connectvars.php');
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			if (!$con)
@@ -58,7 +58,7 @@
 
 		public function removewitem(){
 			require_once('include/witem.class.php');
-			require_once('include/connectvar.php'); 
+			require_once('include/connectvars.php'); 
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			if (!$con)
 	  		{
