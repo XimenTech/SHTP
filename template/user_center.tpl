@@ -56,10 +56,31 @@
 			<!-- 主要内容板块详细信息 -->
 			<div id = "content_detail">
 				<div id = "content_detail_list1" >
-					我的二手信息板块
+					<div id="content_detail_list1_item_top">
+						<div id = "content_detail_list1_item_title">物品名称</div>
+						<div id = "content_detail_list1_item_img">物品图片</div>
+						<div id = "content_detail_list1_item_detail">物品介绍</div>
+						<div id = "content_detail_list1_item_viewtime">浏览次数</div>
+					</div>
+					<div id="content_detail_list1_item">
+						<div id = "content_detail_list1_item_title">{$item_title}</div>
+						<div id = "content_detail_list1_item_img"><img src="resource/image/huabanxie.jpg" width=70" height="50"></div>
+						<div id = "content_detail_list1_item_detail">{$item_detail}</div>
+						<div id = "content_detail_list1_item_viewtime">{$item_viewtime}</div>
+					</div>
+					
 				</div>
 				<div id = "content_detail_list2">
-					个人信息板块
+					<form enctype="multipart/form-data" action="test_user_center_rslt.php" method="post" name="user_center_myinfo_form">
+						<p>当前头像：<img src="resource/image/defalut_icon.jpg" width="100" height="100"></p>
+						<p id="content_detail_list2_item">修改头像：<input type="hidden" name="MAX_FILE_SIZE" value="3276800"/>
+	<input type="file" id="headportrait" name="avater" onchange="previewImage(this)"/></p>
+						<p>昵称：<input type="text" name="name" value="{$name}" /></p>
+						<p>QQ号：<input type="text" name="qq" value="{$qq}"/></p>
+						<p>手机：<input type="text" name="phone" value="{$phone}"/></p>
+						<p>地址：<input type="text" name="address" value="{$address}"/></p>
+						<input type="submit" value="修改并保存" />
+					</form>
 				</div>
 				<div id = "content_detail_list3">
 					我的收藏板块
