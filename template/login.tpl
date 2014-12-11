@@ -1,7 +1,7 @@
 	
 		<!-- 页面主要内容板块 -->
 		<div id = "content_login">
-			<form action="test_login_rslt.php" method="post" name="login_form" onsubmit="return check()">
+			<form action="test_login_rslt.php" method="post" name="login_form" onsubmit="return check_login()">
 				<input type = "hidden" name="controller" value = "c_user"/>
 				<input type = "hidden" name="action" value = "login"/>
   				<p id="User_email">请输入E-mail：<input type="text" name="email" /></p>

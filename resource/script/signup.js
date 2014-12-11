@@ -1,4 +1,4 @@
-function check () {
+function check_signup() {
 	var email = document.signup_form.email.value;
 	var password = document.signup_form.password.value;
 	var password2 = document.signup_form.password2.value;

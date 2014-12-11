@@ -2,7 +2,7 @@
 		
 		<!-- 页面主要内容板块 -->
 		<div id = "content_signup">
-			<form action="test_signup_rslt.php" method="post" name="signup_form" onsubmit="return check()">
+			<form action="test_signup_rslt.php" method="post" name="signup_form" onsubmit="return check_signup()">
 				<input type = "hidden" name="controller" value = "c_user"/>
 				<input type = "hidden" name="action" value = "signup"/>
   				<p id="User_email">请输入E-mail：<input type="text" name="email" /></p>

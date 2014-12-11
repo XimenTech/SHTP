@@ -1,4 +1,4 @@
-function check () {
+function check_login() {
 	var email = document.login_form.email.value;
 	var password = document.login_form.password.value;
 	if (email=="")

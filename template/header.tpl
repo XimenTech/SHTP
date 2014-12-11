@@ -33,7 +33,7 @@
 			<div id = "main_search" style="background-image:url(resource/image/search.png)">
 				<div id = "main_search_item1"><b>寻宝:</b></div>
 				<div id = "main_search_item2">
-					<form class="search" action action= "index.php" method="get">
+					<form class="search" action= "index.php" method="get">
 					<input type="text" name="search" value="商品名称或商品种类">
 					<input type="submit" value="搜索">
 					<br>
