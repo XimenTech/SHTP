@@ -1,7 +1,7 @@
 <?php
 	class c_witem{
 		public function invoke(){
-			switch ($_GET['action']) {
+			switch ($action) {
 				case 'addwitem':
 					require_once('model/m_witem.php');
 					$this->model = new m_witem();
