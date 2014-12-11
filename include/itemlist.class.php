@@ -18,4 +18,3 @@
 			$this->item_detail 	=	$detail;
 		}
 	}
-?>

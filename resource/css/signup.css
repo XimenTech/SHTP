@@ -1,0 +1,40 @@
+#content{
+	position: relative;
+	width: 85em;
+	height: 15em;
+}
+
+#User_email{
+	position: relative;
+	width: 85em;
+}
+
+#User_password{
+	position: relative;
+	width: 85em;
+	margin-top: 1em;
+}
+
+#User_password_again{
+	position: relative;
+	width: 85em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#User_password_check{
+	position: relative;
+	width: 10em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin:auto;
+	text-align: center;
+	border="1" ;
+	cellspacing="0" ;
+	cellpadding="1" ;
+	bordercolor="#eeeeee" ;
+	height="2em" ;
+	style='display:inline';
+}
+
+
