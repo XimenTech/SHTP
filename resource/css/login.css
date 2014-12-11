@@ -1,0 +1,16 @@
+#content{
+	position: relative;
+	width: 85em;
+	height: 10em;
+}
+
+#User_email{
+	position: relative;
+	width: 85em;
+}
+
+#User_password{
+	position: relative;
+	width: 85em;
+	margin-top: 1em;
+}
