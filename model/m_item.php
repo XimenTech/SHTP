@@ -2,8 +2,8 @@
 
 	class m_item{ 
 		public function additem(){
-			require_once('includes/item.class.php');
-			require_once('includes/connectvars.php'); 
+			require_once('include/item.class.php');
+			require_once('include/connectvar.php'); 
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			if (!$con)
@@ -22,8 +22,8 @@
 		}
 
 		public function edititem(){
-		 	require_once('includes/item.class.php');
-			require_once('includes/connectvars.php');
+		 	require_once('include/item.class.php');
+			require_once('include/connectvar.php');
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			if (!$con)
@@ -57,15 +57,15 @@
 		}
 
 		public function removeitem(){
-			require_once('includes/item.class.php');
-			require_once('includes/connectvars.php'); 
+			require_once('include/item.class.php');
+			require_once('include/connectvar.php'); 
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 			if (!$con)
 	  		{
 	  		die('Could not connect: ' . mysql_error());
 	  		}
 
-	  		mysql_query("DELETE FROM shtp_item WHERE item_id='$item_id' ");
+	  		mysql_query("DELETE FROM shtp_item WHERE item_id='$item_id' ")
 	  		or die('Could not remove'. mysql_error());
 	  		mysql_close($con);
 		}
