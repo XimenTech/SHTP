@@ -71,12 +71,19 @@
 				setcookie('user_phone',$row['user_phone']);
 				setcookie('user_address',$row['user_address']);
 				setcookie('user_reg_date',$row['user_reg_date']);
-				echo "登陆成功\n";
+
+
+				echo "登陆成功";
+
 
 					//header('Location: ../index.php');
 			}else{
 				$error_msg = '用户名或密码错误';
+
 				echo "登陆失败";
+
+				echo $error_msg;
+
 			}
 			mysqli_close($dbc);
 		}
@@ -90,38 +97,58 @@
 
 			//获取数据库连接变量
 			require_once('include/connectvars.php');
-
+			require_once('include/appvars.php');
 
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 
-			//$email		=	$_POST['email'];
-			$authority	=	$_POST['authority'];
-			$status		=	$_POST['status'];
-			$avatar		=	$_POST['avatar'];
+
+			//$authority	=	$_POST['authority'];
+			//$avatar		=	$_POST['avatar'];
+			//	echo $_POST['name'];
+			$id 		=	$_SESSION['user_id'];
+			$avatar		= 	$_FILES['avatar']['name'];
+			$avatar_type= 	$_FILES['avatar']['type'];
+			$avatar_size= 	$_FILES['avatar']['size'];
+
 			$name		=	$_POST['name'];
 			$qq			=	$_POST['qq'];
 			$phone		=	$_POST['phone'];
 			$address	=	$_POST['address'];
-			$reg_date	=	$_POST['reg_date'];
-				
-			$query = "UPDATE shtp_user SET 	user_authority 	= '$authority',
-											user_status		= '$status',
-											user_avatar		= '$avatar',
-											user_name 		= '$name',
-											user_qq			= '$phone',
-											user_phone		= '$phone',
-											user_address	= '$address',
-											user_reg_date	= '$reg_date'
-											WHERE user_email = '$email'";
-			$result = mysqli_query($dbc,$query)
-				or die('fail');
-			//	$query = "INSERT INTO tc_users (user_email,user_pass,user_username,user_reg_date)".
-			//			"VALUES ('$email','".sha1($pass1)."','$username',NOW())";
 
-			//	$result = mysqli_query($dbc,$query)
-			//			or die('fail');
+			if (!empty($avatar)){
+				if ((($avatar_type == 'image/gif') 	|| 
+					 ($avatar_type == 'image/jpeg') || 
+					 ($avatar_type == 'image/pjpeg')|| 
+					 ($avatar_type == 'image/png'))		&& 
+					 ($avatar_size > 0) 				&& 
+					 ($avatar <= HEADPORTRAIT_MAXFILESIZE)) {
+
+						$avatar = $id;
+
+		
+
+						$target = HEADPORTRAIT_PATH. $avatar;
+						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
+
+						//$query = "UPDATE tc_users SET user_head_portrait = '$hp' WHERE user_ID = $temp";
+						$query = "UPDATE shtp_user SET 	user_avatar		= '$avatar',
+														user_name 		= '$name',
+														user_qq			= '$phone',
+														user_phone		= '$phone',
+														user_address	= '$address'
+														WHERE user_id	= '$id'";
+						$result = mysqli_query($dbc,$query)
+							or die('fail');
+						echo "修改成功";
+
+				}else{
+					echo '类型或大小错误';
+				}
+			}else{
+				echo '未选择文件';
+			}	
+				
 			mysqli_close($dbc);
 		}
-
 	}
