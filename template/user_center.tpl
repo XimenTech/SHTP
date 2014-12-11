@@ -89,7 +89,18 @@
 					商品管理板块
 				</div>
 				<div id = "content_detail_list5">
-					我的求购信息板块
+					<div id="content_detail_list1_item_top">
+						<div id = "content_detail_list1_item_title">物品名称</div>
+						<div id = "content_detail_list1_item_img">物品图片</div>
+						<div id = "content_detail_list1_item_detail">物品介绍</div>
+						<div id = "content_detail_list1_item_viewtime">浏览次数</div>
+					</div>
+					<div id="content_detail_list1_item">
+						<div id = "content_detail_list1_item_title">{$witem_title}</div>
+						<div id = "content_detail_list1_item_img"><img src="resource/image/bike.jpg" width=70" height="50"></div>
+						<div id = "content_detail_list1_item_detail">{$witem_detail}</div>
+						<div id = "content_detail_list1_item_viewtime">{$witem_viewtime}</div>
+					</div>
 				</div>
 				<div id = "content_detail_list6">
 					我的消息板块

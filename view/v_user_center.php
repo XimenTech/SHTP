@@ -7,6 +7,10 @@
 	$item_detail='我的滑板鞋，时尚时尚最时尚！';
 	$item_viewtime='44';
 
+	$witem_title='自行车';
+	$witem_detail='能用就行';
+	$witem_viewtime='20';
+
 
 	$name='felix';
 	$qq='123456@qq.com';
@@ -19,6 +23,10 @@
 	$user_center->assign("item_title",$item_title);
 	$user_center->assign("item_detail",$item_detail);
 	$user_center->assign("item_viewtime",$item_viewtime);
+
+	$user_center->assign("witem_title",$witem_title);
+	$user_center->assign("witem_detail",$witem_detail);
+	$user_center->assign("witem_viewtime",$witem_viewtime);
 
 	$user_center->assign("name",$name);
 	$user_center->assign("qq",$qq);
