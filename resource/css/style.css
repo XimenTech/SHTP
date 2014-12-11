@@ -1,0 +1,162 @@
+body{
+	position: relative
+ 	width: 85em;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	text-align:center;
+}
+
+div{
+	display: inline;
+	float: left;
+}
+
+a.menu_list:hover{
+	color: #CD0000;
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+#top{
+	position: relative;
+	width: 85em;
+	height: 2em;
+	background-color: #dddddd;
+}
+
+#top_item_login{
+	position: relative;
+	width: 7em;
+	height: 2em;
+	margin-top: 0.4em;
+	margin-left: 13em;
+	color: #FF0000;
+}
+
+#top_item_signup{
+	position: relative;
+	width: 8em;
+	height: 2em;
+	margin-top: 0.4em;
+	color: #FF0000;
+}
+
+#top_item_my{
+	position: relative;
+	width: 5em;
+	height: 2em;
+	margin-top: 0.4em;
+	margin-left: 34em;
+}
+
+#top_item_favor{
+	position: relative;
+	width: 5em;
+	height: 2em;
+	margin-top: 0.4em;
+}
+
+#top_item_quick{
+	position: relative;
+	width: 5em;
+	height: 2em;
+	margin-top: 0.4em;
+}
+
+#main{
+	position: relative;
+	width: 85em;
+	height: 8em;
+}
+
+#main_logo{
+	position: relative;;
+	width: 20em;
+	height:6em;
+	margin-left: 18em;
+}
+
+
+
+#main_search{
+	position: relative;
+	width: 30em;
+	height: 6em;
+	margin-left: 6em;
+	margin-top: 2em;
+	background-repeat: no-repeat;
+}
+
+#main_search_item1{
+	position: relative;;
+	width: 3em;
+	height:6em;	
+	margin-left: 1.5em;
+	margin-top: 0.5em;
+	font-size: 2em;
+}
+
+#main_search_item2{
+	position: relative;;
+	width: 15em;
+	height:6em;	
+}
+
+.search{
+	margin-top:1.2em;
+ 	margin-left:auto;
+
+}
+
+
+#bottom{
+	position: relative;
+	width: 85em;
+	height: 2em;
+	background-color: #dddddd;
+	border: 0.07em solid #777;
+}
+
+#bottom_item_aboutus{
+	position: relative;
+	width: 7em;
+	height: 2em;
+	margin-top: 0.4em;
+	margin-left: 25em;
+}
+
+#bottom_item_help{
+	position: relative;
+	width: 7em;
+	height: 2em;
+	margin-top: 0.4em;
+}
+
+#bottom_item_contact{
+	position: relative;
+	width: 7em;
+	height: 2em;
+	margin-top: 0.4em;
+}
+
+#bottom_item_claim{
+	position: relative;
+	width: 7em;
+	height: 2em;
+	margin-top: 0.4em;
+}
+
+#bottom_item_advice{
+	position: relative;
+	width: 7em;
+	height: 2em;
+	margin-top: 0.4em;
+}
+
+
+
+#footer{
+	position: relative;
+	width: 85em;
+	height: 2em;
+}
