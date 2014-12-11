@@ -1,0 +1,81 @@
+#content{
+	position: relative;
+	width: 85em;
+	height: 29em;
+}
+
+#content_menu{
+	position: relative;
+	width: 12em;
+	height: 23em;
+	background-color: #dddddd;
+	border: 0.07em solid #777;
+	margin-left: 15em;
+}
+
+
+
+#content_menu_list{
+	position: relative;
+	width: 12em;
+	height: 2em;
+	margin-top: 0.5em;	
+
+}
+
+#content_detail{
+	position: relative;
+	width: 45em;
+	height: 23em;
+	margin-left: 2em;
+	background-color: #dddddd;
+	border: 0.07em solid #777;
+}
+
+
+#item_menu{
+	position: relative;	
+	width: 14em;
+	height:14em;
+	margin-left: 15em;
+}
+
+.button1{
+	width: 14em;
+	height: 1.92em;
+	line-height: 1.92em;
+	background-color: #ffffff;
+	border:0.1em solid #777;
+}
+
+.button1:hover{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#hot{
+	position: relative;
+	width: 30em;
+	height:14em;
+	border:0.1em solid #777;
+	margin-left: 1.5em;
+}
+
+#recently{
+	position: relative;
+	width: 12em;
+	height: 28em;
+	margin-left: 1.5em;
+	background-color:#71C671;
+	border:0.1em solid #777;
+}
+
+#new_item{
+	position: relative;
+	width: 45.5em;
+	height: 13em;
+	margin-left: 15em;
+	margin-top: -13em;
+	border:0.1em solid #777;
+}
