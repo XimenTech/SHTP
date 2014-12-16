@@ -37,9 +37,9 @@ function ajax_login() {
             // document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
              var obj = eval("(" + xmlhttp.responseText + ")");
              alert(obj.msg);
-            // if(obj.flag==1){
-            //   window.location.href = 'http://localhost/SHTP/index.php?static=login';
-            // }
+             if(obj.flag==1){
+               window.location.href = 'http://localhost/SHTP/index.php';
+             }
         }
     }
 
