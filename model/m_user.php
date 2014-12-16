@@ -79,11 +79,8 @@
 
 					//header('Location: ../index.php');
 			}else{
-				$error_msg = '用户名或密码错误';
 
-				echo json_encode(array('flag' => 0, 'msg' => '登陆失败'));
-
-				echo $error_msg;
+				echo json_encode(array('flag' => 0, 'msg' => '用户名或密码错误'));
 
 			}
 			mysqli_close($dbc);
