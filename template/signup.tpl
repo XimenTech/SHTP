@@ -4,7 +4,7 @@
 
 		<div id = "content_signup">
 
-			<form action="test_signup_rslt.php" method="post" name="signup_form" onsubmit="return check_signup()">
+			<form action="index.php" method="post" name="signup_form" onsubmit="return check_signup()">
 
 			<form action="index.php" method="post" name="signup_form" onsubmit="return check_signup()">
 
