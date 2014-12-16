@@ -18,7 +18,6 @@
 			if ( isset($controller) ){
 				switch ($controller) {
 					case 'c_user':
-
 						require_once('controller/c_user.php');
 						$c_user = new c_user();
 						$c_user->invoke();
@@ -31,7 +30,6 @@
 				}
 
 			}elseif ( isset($_GET['static']) ){
-				echo 1;
 				require_once('view/v_'.$_GET['static'].'.php');
 			}else{
 				GLOBAL $action;
