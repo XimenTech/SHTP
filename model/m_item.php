@@ -77,7 +77,7 @@
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
 			or die('连接数据库失败！');
-	  		$sql = "SELECT item_id,item_img,item_title,item_price FROM shtp_item ORDER BY item_dttm";
+	  		$sql = "SELECT item_id,item_img,item_title,item_detail,item_price FROM shtp_item ORDER BY item_dttm";
 	  		$new_data = mysqli_query($con,$sql);
 	  		GLOBAL $newitem_main;
 	  		$newitem_main=array();
