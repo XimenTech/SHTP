@@ -41,7 +41,7 @@
 			$con = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
 			or die('连接数据库失败！');
 			$myid = $_SESSION['user_id'];
-			$sql = "SELECT item_id,item_img,item_title,item_price FROM shtp_item where user_id = '$user_id'";
+			$sql = "SELECT item_id,item_img,item_title,item_price,item_viewtime,item_detail FROM shtp_item where user_id = '$myid'";
 	  		$data = mysqli_query($con,$sql);
 			GLOBAL $myitem_main;
 	  		$myitem_main=array();

@@ -3,10 +3,13 @@
 
 	require_once('../smarty/libs/Smarty.class.php');
 
-	$item_title='滑板鞋';
-	$item_detail='我的滑板鞋，时尚时尚最时尚！';
-	$item_viewtime='44';
+	GLOBAL $myitem_main;
 
+	//$item_title=$myitem_main[0]['item_title'];
+	//$item_detail=$myitem_main[0]['item_detail'];
+	//$item_viewtime=$myitem_main[0]['item_viewtime'];
+
+	
 	$witem_title='自行车';
 	$witem_detail='能用就行';
 	$witem_viewtime='20';
@@ -22,9 +25,11 @@
 
 	$user_center = new smarty();
 
-	$user_center->assign("item_title",$item_title);
-	$user_center->assign("item_detail",$item_detail);
-	$user_center->assign("item_viewtime",$item_viewtime);
+
+	$user_center->assign("myitem_main",$myitem_main);
+	//$user_center->assign("item_title",$item_title);
+	//$user_center->assign("item_detail",$item_detail);
+	//$user_center->assign("item_viewtime",$item_viewtime);
 
 	$user_center->assign("witem_title",$witem_title);
 	$user_center->assign("witem_detail",$witem_detail);
