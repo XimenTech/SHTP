@@ -40,7 +40,8 @@
 			require_once('include/connectvars.php');
 				
 
-
+//登陆前先判断是否存在cookie
+//.......
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 			$email = $_POST['email'];
@@ -50,6 +51,7 @@
 
 			if (mysqli_num_rows($data) == 1){
 				$row = mysqli_fetch_array($data);
+				session_start();
 				$_SESSION['user_id'] = $row['user_id'];
 				$_SESSION['user_email'] = $row['user_email'];
 				$_SESSION['user_name'] = $row['user_name'];
@@ -72,14 +74,14 @@
 				setcookie('user_reg_date',$row['user_reg_date']);
 
 
-				echo "登陆成功";
+				echo json_encode(array('flag' => 1, 'msg' => '登陆成功'));
 
 
 					//header('Location: ../index.php');
 			}else{
 				$error_msg = '用户名或密码错误';
 
-				echo "登陆失败";
+				echo json_encode(array('flag' => 0, 'msg' => '登陆失败'));
 
 				echo $error_msg;
 
@@ -119,8 +121,8 @@
 				if ((($avatar_type == 'image/gif') 	|| 
 					 ($avatar_type == 'image/jpeg') || 
 					 ($avatar_type == 'image/pjpeg')|| 
-					 ($avatar_type == 'image/png'))		&& 
-					 ($avatar_size > 0) 				&& 
+					 ($avatar_type == 'image/png'))	&& 
+					 ($avatar_size > 0) 			&& 
 					 ($avatar <= HEADPORTRAIT_MAXFILESIZE)) {
 
 						$avatar = $id;
@@ -149,5 +151,9 @@
 			}	
 				
 			mysqli_close($dbc);
+		}
+
+		public function logout(){ 
+
 		}
 	}
