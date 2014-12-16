@@ -27,7 +27,7 @@
 				<div id="top_item_uesrname">
 					尊敬的
 					<a class = "menu_list" href="index.php?controller=c_user&action=user_center">{$user_name}</a></div>!
-				<div id = "top_item_logout"><a class = "menu_list" href="index.php?static=logout">注销</a></div>
+				<div id = "top_item_logout"><a class = "menu_list" href="index.php?controller=c_user&action=logout">注销</a></div>
 			{/if}
 			<div id = "top_item_my"><a class = "menu_list" href="index.php?controller=c_user&action=user_center">我的二手</a></div>
 			<div id = "top_item_favor"><a class = "menu_list">收藏夹</a></div>
