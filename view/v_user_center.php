@@ -12,10 +12,12 @@
 	$witem_viewtime='20';
 
 
-	$name='felix';
-	$qq='123456@qq.com';
-	$phone='13872193043';
-	$address='四川成都';
+
+	$avatar=HEADPORTRAIT_PATH.$_SESSION['user_avatar'];
+	$name=$_SESSION['user_name'];
+	$qq=$_SESSION['user_qq'];
+	$phone=$_SESSION['user_phone'];
+	$address=$_SESSION['user_address'];
 
 
 	$user_center = new smarty();
@@ -28,6 +30,7 @@
 	$user_center->assign("witem_detail",$witem_detail);
 	$user_center->assign("witem_viewtime",$witem_viewtime);
 
+	$user_center->assign("avatar",$avatar);
 	$user_center->assign("name",$name);
 	$user_center->assign("qq",$qq);
 	$user_center->assign("phone",$phone);

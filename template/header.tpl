@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>{$page_title}</title>
 		<!-- 引入css样式表 -->
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
