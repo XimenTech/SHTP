@@ -129,7 +129,8 @@
 						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);*/
 
 						//$query = "UPDATE tc_users SET user_head_portrait = '$hp' WHERE user_ID = $temp";
-						$query = "UPDATE shtp_user SET 	/*user_avatar		= '$avatar',*/
+						/*user_avatar		= '$avatar',*/
+						$query = "UPDATE shtp_user SET 	
 														user_name 		= '$name',
 														user_qq			= '$phone',
 														user_phone		= '$phone',
