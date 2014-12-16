@@ -19,38 +19,44 @@
 		<div id="page1" style="display:block">
 			<b id="page">1/3</b>
 			{section name=item loop=$hotitem_main max=5}
+			<a href="index.php?controller=c_item&action=viewitem&item_id={$hotitem_main[item].item_id}" >
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
 				<p>&nbsp{$hotitem_main[item].item_price}</p>
 			</div>
+			</a>
 			{/section}
 		</div>
 		<div id="page2" style="display:none">
 			<b id="page">2/3</b>
 			{section name=item loop=$hotitem_main start=5 max=5}
+			<a href="index.php?controller=c_item&action=viewitem&item_id={$hotitem_main[item].item_id}" >
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
 				<p>&nbsp{$hotitem_main[item].item_price}</p>
 			</div>
+			</a>
 			{/section}
 		</div>
 		<div id="page3" style="display:none">
 			<b id="page">3/3</b>
 			{section name=item loop=$hotitem_main start=10 max=5}
+			<a href="index.php?controller=c_item&action=viewitem&item_id={$hotitem_main[item].item_id}" >
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
 				<p>&nbsp{$hotitem_main[item].item_price}</p>
 			</div>
+			</a>
 			{/section}
 		</div>
 	</div>
 	
-	<div id="recently">
+	<div id="want">
 		<div>
-			<b style="color:#333;font-size:1em">最近浏览</b>
+			<b style="color:#333;font-size:1em">求购商品</b>
 		</div>
 	</div>
 	
@@ -58,6 +64,7 @@
 		<div style="height:1em;"><b id="new_title">最新上架</b></div>
 		<br>
 		{section name=new loop=$newitem_main}
+		<a href="index.php?controller=c_item&action=viewitem&item_id={$newitem_main[new].item_id}" >
 		<div class="new_item" >
 			<div style="width:20%; height:100%;">
 				<img class="new_img" src="resource/image/{$newitem_main[new].item_img}">
@@ -70,6 +77,7 @@
 				{$newitem_main[new].item_price}
 			</div>
 		</div>
+		</a>
 		{/section}
 	</div>	
 </div>
