@@ -3,6 +3,10 @@
 		public function invoke(){
 			GLOBAL $action;
 			switch ($action) {
+				case 'viewwitem':
+					require_once('view/v_view_item.php');
+					break;
+
 				case 'addwitem':
 					require_once('model/m_witem.php');
 					$this->model = new m_witem();

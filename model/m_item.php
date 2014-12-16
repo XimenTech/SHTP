@@ -7,13 +7,27 @@
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
 			or die('连接数据库失败！');
-	  		$item_img 		=	$_POST['item_img'];
+	  		$item_img_name	= 	$_FILES['item_img']['name'];
+			$item_img_type	= 	$_FILES['item_img']['type'];
+			$item_img_size	= 	$_FILES['item_img']['size'];
+			if (!empty($avatar)){
+				if ((($item_img_type == 'image/gif') 	|| 
+					 ($item_img_type == 'image/jpeg') || 
+					 ($item_img_type == 'image/pjpeg')|| 
+					 ($item_img_type == 'image/png'))	&& 
+					 ($item_img_size > 0) 			&& 
+					 ($item_img <= HEADPORTRAIT_MAXFILESIZE)) {
+						$item_img = time().$item_img;
+						$item_img_path = HEADPORTRAIT_PATH. $item_img;
+						move_uploaded_file($_FILES['item_img']['tmp_name'], $item_img_path);
+					}
+			}
 	  		$user_id		=	$_POST['user_id'];
 	  		$item_type 		=	$_POST['item_type'];
 	  		$item_title		=	$_POST['item_title'];
 	  		$item_detail	=	$_POST['item_detail'];
 	  		$item_price		=	$_POST['item_price'];
-			$sql = "INSERT INTO shtp_item (item_img,user_id,item_type,item_title,item_detail,item_price,item_dttm) VALUES ('$item_img','$user_id','$item_type','$item_title','$item_detail','$item_price',NOW())";
+			$sql = "INSERT INTO shtp_item (item_img,user_id,item_id,item_type,item_title,item_detail,item_price,item_dttm) VALUES ('$item_img_path','$user_id',default,$item_type','$item_title','$item_detail','$item_price',NOW())";
 			$result_aitem = mysqli_query($con,$sql)
 			or die('添加商品失败！');
 			echo "成功添加商品！";
@@ -37,6 +51,27 @@
 	  			$hotitem_main[]=$row;
 	  			$sum++;
 	  		}
+	  		mysqli_close($con);
+		}
+
+		public function newitem(){ 
+			require_once('include/item.class.php');
+			require_once('include/connectvars.php');
+			//获取数据库连接变量
+			$con = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
+			or die('连接数据库失败！');
+	  		$sql = "SELECT item_id,item_img,item_title,item_price FROM shtp_item ORDER BY item_dttm";
+	  		$new_data = mysqli_query($con,$sql);
+	  		GLOBAL $newitem_main;
+	  		$newitem_main=array();
+	  		$sum=0;
+	  		while($row = mysqli_fetch_array($new_data,MYSQL_ASSOC)){ 
+	  			if($sum==4)
+	  			break;
+	  			$newitem_main[]=$row;
+	  			$sum++;
+	  		}
+	  		print_r($newitem_main);	
 	  		mysqli_close($con);
 		}
  

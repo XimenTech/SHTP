@@ -1,4 +1,4 @@
-#content{
+#content_add_item{
 	/*background-color: lightgreen;*/
     position: relative;
 	width: 85em;
@@ -7,7 +7,7 @@
 
 #basic_info{
     
-    background-co/*lor: lightpink;*/
+    /*background-color: lightpink;*/
     position: relative;
 	width: 85em;
 	height:7em;

@@ -3,20 +3,35 @@
     header("Content-Type:text/html;charset=utf-8");
 
 	
-    $item_title = '香蕉';
-    $item_id = '123456';
-    $item_status = '1';
-    $item_img = 'resource\banana.jpg';
-    $item_type = 'food';
-    $item_detail = 'delicious fruit';
-    $item_owner_qq = '**********';
-    $item_owner_phone = '**********';
-    $item_owner_address = '*********';
-    $item_viewtime = '4';
-    $item_dttm = '2014/11/11';
-    $item_price = '1.00';
+    // $item_title = '香蕉';
+    // $item_id = '123456';
+    // $item_status = '1';
+    // $item_img = 'resource\banana.jpg';
+    // $item_type = 'food';
+    // $item_detail = 'delicious fruit';
+    // $item_owner_qq = '**********';
+    // $item_owner_phone = '**********';
+    // $item_owner_address = '*********';
+    // $item_viewtime = '4';
+    // $item_dttm = '2014/11/11';
+    // $item_price = '1.00';
 	$viewitem = new smarty();
+    
+    GLOBAL $item_title;
+    GLOBAL $item_id;
+    GLOBAL $item_status;
+    GLOBAL $item_img;
+    GLOBAL $item_type;
+    GLOBAL $item_detail;
+    GLOBAL $item_owner_qq;
+    GLOBAL $item_owner_phone;
+    GLOBAL $item_owner_address;
+    GLOBAL $item_viewtime;
+    GLOBAL $item_dttm;
+    GLOBAL $item_price;
+    GLOBAL $user_id;
 
+    
 	$viewitem->assign("items_title",$item_title);
 	$viewitem->assign("item_id",$item_id);
 	$viewitem->assign("item_status",$item_status);
@@ -28,8 +43,11 @@
 	$viewitem->assign("item_owner_address",$item_owner_address);
 	$viewitem->assign("item_viewtime",$item_viewtime);
 	$viewitem->assign("item_dttm",$item_dttm);
-	$viewitem->assign("item_price",$item_price );
+	$viewitem->assign("item_price",$item_price);
+	$viewitem->assign("item_price",$user_id);
     
+    if()
+
     $viewitem->display("template/header.tpl");
 	$viewitem->display("template/view_item.tpl");
 	$viewitem->display("template/footer.tpl");
