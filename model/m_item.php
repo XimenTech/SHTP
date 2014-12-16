@@ -151,12 +151,7 @@
 			or die('连接数据库失败！');
 
 			$viewitem_id = $_GET['item_id'];
-			$vitem = ("SELECT item_id,
-	  						  item_img,
-	  						  item_type,
-	  						  item_title,
-	  						  item_detail,
-	  						  item_price 
+			$vitem = ("SELECT *
 	  						FROM shtp_item WHERE item_id='$viewitem_id'");
 	  		$result_vitem = mysqli_query($con,$vitem);
 	  		GLOBAL $vitem_data;

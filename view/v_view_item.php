@@ -15,10 +15,13 @@
     // $item_viewtime = '4';
     // $item_dttm = '2014/11/11';
     // $item_price = '1.00';
+    GLOBAL $page_title;
+    $page_title = '商品';
+
 	$viewitem = new smarty();
     
     GLOBAL $vitem_data;
-    print_r($vitem_data);
+
 	$viewitem->assign("items_title",$vitem_data['item_title']);
 	$viewitem->assign("item_id",$vitem_data['item_id']);
 	$viewitem->assign("item_status",$vitem_data['item_status']);
@@ -30,7 +33,7 @@
 	$viewitem->assign("item_owner_address",$vitem_data['item_owner_address']);
 	$viewitem->assign("item_viewtime", $vitem_data['item_viewtime']);
 	$viewitem->assign("item_dttm",$vitem_data['item_dttm']);
-	$viewitem->assign("item_price",$vitem_data['$item_price']);
+	$viewitem->assign("item_price",$vitem_data['item_price']);
 
 
     if(isset($_SESSION['user_id'])){
