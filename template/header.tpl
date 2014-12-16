@@ -9,7 +9,9 @@
 		<link href="resource/css/signup.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/login.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/add_item.css" type="text/css" rel="stylesheet">
+		<link href="resource/css/add_witem.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/edit_item.css" type="text/css" rel="stylesheet">
+		<link href="resource/css/edit_witem.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/view_item.css" type="text/css" rel="stylesheet">
 		<!-- 引入js -->
 		<script src="resource/script/signup.js"></script>

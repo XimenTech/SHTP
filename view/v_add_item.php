@@ -1,6 +1,7 @@
 <?php
     require_once('../smarty/libs/Smarty.class.php');
-
+    header("Content-Type:text/html;charset=utf-8");
+    
     
     $item_title='fexix';
     $item_img='resource\banana.jpg';

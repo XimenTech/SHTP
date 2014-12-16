@@ -1,11 +1,11 @@
-#content_edit_item{
+#content_add_witem{
 	/*background-color: lightgreen;*/
     position: relative;
 	width: 85em;
-	height:55em;
+	height:30em;
 }
 
-#basic_info_edit{
+#wbasic_info{
     
     /*background-color: lightpink;*/
     position: relative;
@@ -14,7 +14,7 @@
 
 }
 
-#detial_edit{
+#wdetial{
 	
 	margin-left: -5.5em;
 	/*background-color: lightblue;*/
@@ -23,26 +23,11 @@
 	height:3em;
 }
 
-#descreption_edit{
+#wdescreption{
    
 	/*background-color: lightyellow;*/
     position: relative;
 	width: 85em;
-	height:12em;
+	height:15em;
 }
 
-#picture_edit{
-	margin-left: -5.5em;
-	/*background-color: white;*/
-    position: relative;
-	width: 85em;
-	height:2em;
-}
-
-#pic_edit{
-	
-	/*background-color: blue;*/
-    position: relative;
-	width: 85em;
-	height:25em;
-}
