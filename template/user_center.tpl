@@ -30,7 +30,7 @@
 					</div>
 					<div id="content_detail_list1_item">
 						<div id = "content_detail_list1_item_title">{$item_title}</div>
-						<div id = "content_detail_list1_item_img"><img src="resource/image/huabanxie.jpg" width=70" height="50"></div>
+						<div id = "content_detail_list1_item_img"><img src="resource/image/huabanxie.jpg" width="70" height="50"></div>
 						<div id = "content_detail_list1_item_detail">{$item_detail}</div>
 						<div id = "content_detail_list1_item_viewtime">{$item_viewtime}</div>
 					</div>
