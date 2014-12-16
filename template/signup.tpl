@@ -1,18 +1,12 @@
 
 		
 		<!-- 页面主要内容板块 -->
-
 		<div id = "content_signup">
-
-			<form action="index.php" method="post" name="signup_form" onsubmit="return check_signup()">
-
-			<form action="index.php" method="post" name="signup_form" onsubmit="return check_signup()">
-
-				<input type = "hidden" name="controller" value = "c_user"/>
-				<input type = "hidden" name="action" value = "signup"/>
+			<form method="post" name="signup_form">
+				<!-- <input type = "hidden" name="controller" value = "c_user"/>
+				<input type = "hidden" name="action" value = "signup"/> -->
   				<p id="User_email">请输入E-mail：<input type="text" name="email" /></p>
   				<p id="User_password">请输入密码&nbsp： <input type="password" name="password" onKeyUp=pwStrength(this.value) onBlur=pwStrength(this.value)/></p>
-
   				<p id="User_password_again">再次输入密码：<input type="password" name="password2" /></p>
    				密码强度:  
 				<table id = "User_password_check">  
@@ -23,11 +17,8 @@
 				</tr>  
 				</table>
 				<br>
-  				<input type="submit" value="马上注册" />
+  				<!-- <input type="submit" value="马上注册" onclick="ajax_signup()" /> -->
+  				<button type="button" onclick="ajax_signup()" >马上注册</button>
 			</form>
-		</div>
-
-	
-
 		</div>
 		

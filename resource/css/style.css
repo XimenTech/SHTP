@@ -41,6 +41,23 @@ a.menu_list:hover{
 	color: #FF0000;
 }
 
+#top_item_uesrname{
+	position: relative;
+	width: 5em;
+	height: 2em;
+	margin-top: 0.4em;
+	margin-left: 13em;
+	color: #FF0000;
+}
+#top_item_logout{
+	position: relative;
+	width: 3em;
+	height: 2em;
+	margin-top: 0.4em;
+	margin-left: 4em;
+	color: #FF0000;
+}
+
 #top_item_my{
 	position: relative;
 	width: 5em;

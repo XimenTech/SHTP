@@ -22,9 +22,15 @@
 
 		<!-- 页面顶部板块 -->
 		<div id = "top">
-
-			<div id = "top_item_login"><a class = "menu_list" href="index.php?static=login">亲，请登录！</a></div>
-			<div id = "top_item_signup"><a class = "menu_list" href="index.php?static=signup">立即免费注册</a></div>
+			{if {$sign} == 0}
+				<div id = "top_item_login"><a class = "menu_list" href="index.php?static=login">亲，请登录！</a></div>
+				<div id = "top_item_signup"><a class = "menu_list" href="index.php?static=signup">立即免费注册</a></div>
+			{else}
+				<div id="top_item_uesrname">
+					尊敬的
+					<a class = "menu_list" href="index.php?controller=c_user&action=user_center">{$user_name}</a></div>!
+				<div id = "top_item_logout"><a class = "menu_list" href="index.php?controller=c_user&action=logout">注销</a></div>
+			{/if}
 			<div id = "top_item_my"><a class = "menu_list" href="index.php?controller=c_user&action=user_center">我的二手</a></div>
 			<div id = "top_item_favor"><a class = "menu_list">收藏夹</a></div>
 			<div id = "top_item_quick"><a class = "menu_list">快速发布</a></div>
@@ -32,7 +38,7 @@
 		<!-- 主板块 -->
 		<div id = "main">
 			<!-- 页面logo板块 -->
-			<div id = "main_logo"><img src="resource/image/logo.png"></div>
+			<div id = "main_logo"><a href="index.php?static=main"><img src="resource/image/logo.png"></a></div>
 			<!-- 页面搜索板块 -->
 			<div id = "main_search" style="background-image:url(resource/image/search.png)">
 				<div id = "main_search_item1"><b>寻宝:</b></div>
