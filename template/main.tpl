@@ -28,7 +28,7 @@
 		</div>
 		<div id="page2" style="display:none">
 			<b id="page">2/3</b>
-			{section name=item loop=$hotitem_main start=6 max=5}
+			{section name=item loop=$hotitem_main start=5 max=5}
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
@@ -38,7 +38,7 @@
 		</div>
 		<div id="page3" style="display:none">
 			<b id="page">3/3</b>
-			{section name=item loop=$hotitem_main start=11 max=5}
+			{section name=item loop=$hotitem_main start=10 max=5}
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
