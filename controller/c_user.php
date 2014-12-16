@@ -20,6 +20,7 @@
 					require_once('model/m_user.php');
 					$this->model = new m_user();
 					$this->model->user_center();
+					require_once('view/v_user_center.php');
 					break;
 
 				case 'edit_profile':
