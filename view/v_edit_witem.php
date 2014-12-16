@@ -17,6 +17,7 @@
 	
 
 
-$viewitem->display("template/header.tpl");
-$viewitem->display("template/edit_witem.tpl");
-$viewitem->display("template/footer.tpl");
+
+    require_once('view/v_header.php');
+    $viewitem->display("template/edit_witem.tpl");
+    require_once('view/v_footer.php');
