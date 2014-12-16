@@ -4,9 +4,13 @@
 	                <p>商品名称：{$items_title}</p>     
 		            <p>商品编号：{$item_id}</p>
 	                <p>商品状态：{$item_status}</p>
-	                <p>商品图片：<img src="{$item_img}" /></p>
 	                <p>商品种类：{$item_type}</p>
 	                <p>价格：{$item_price}￥</p>
+	                <p>商品图片：</p>
+	           <div id="vpicture">          
+	                <img src="resource/image/{$item_img}" style="width: 50%;height:70%;margin-left:7em;margin-top:0.5em" />
+	           </div>
+	                
 	                
 	           </div>
 
