@@ -44,6 +44,9 @@
 //.......
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
+
+			mysqli_query($dbc,"SET NAMES utf8");
+
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 			$query = "SELECT * FROM shtp_user WHERE user_email = '$email' AND user_password = '$password'";
@@ -94,10 +97,11 @@
 
 			//获取数据库连接变量
 			require_once('include/connectvars.php');
-			require_once('include/appvars.php');
 
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
+
+			mysqli_query($dbc,"SET NAMES utf8");
 
 			//$authority	=	$_POST['authority'];
 			//$avatar		=	$_POST['avatar'];
@@ -129,7 +133,7 @@
 		
 
 						$target = HEADPORTRAIT_PATH. $avatar;
-						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
+						move_uploaded_file($_FILES['avatar']['tmp_name'], iconv('gbk', 'utf-8', $target));
 
 						//$query = "UPDATE tc_users SET user_head_portrait = '$hp' WHERE user_ID = $temp";
 						
@@ -141,25 +145,44 @@
 														WHERE user_id	= '$id'";
 						$result = mysqli_query($dbc,$query)
 							or die('fail');
-						echo "修改成功";
+
+						//echo "修改成功";
+
+						$_SESSION['user_name'] = $name;
+						$_SESSION['user_qq'] = $qq;
+						$_SESSION['user_avatar'] = $avatar;
+						$_SESSION['user_phone'] = $phone;
+						$_SESSION['user_address'] = $address;
+						setcookie('user_name',$name);
+						setcookie('user_qq',$qq);
+						setcookie('user_avatar',$avatar);
+						setcookie('user_phone',$phone);
+						setcookie('user_address',$address);
 
 				}else{
 					echo '类型或大小错误';
 				}
 			}else{
-				echo '未选择文件';
-			}	
-
+				$query = "UPDATE shtp_user SET 	user_name 		= '$name',
+												user_qq			= '$phone',
+												user_phone		= '$phone',
+												user_address	= '$address'
+												WHERE user_id	= '$id'";
+				$result = mysqli_query($dbc,$query)
+							or die('fail');
+				//echo "修改成功";
 				$_SESSION['user_name'] = $name;
 				$_SESSION['user_qq'] = $qq;
-				$_SESSION['user_avatar'] = $avatar;
+			
 				$_SESSION['user_phone'] = $phone;
 				$_SESSION['user_address'] = $address;
 				setcookie('user_name',$name);
 				setcookie('user_qq',$qq);
-				setcookie('user_avatar',$avatar);
 				setcookie('user_phone',$phone);
 				setcookie('user_address',$address);
+			}	
+
+
 
 
 			mysqli_close($dbc);
