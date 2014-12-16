@@ -33,8 +33,6 @@
 	  		$witem_detail=	$_POST['witem_detail'];
 	  		$witem_price	=	$_POST['witem_price'];
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 	  		$ewitem = ("SELECT witem_id,
 	  									 witem_img,
 	  									 witem_type,
@@ -42,34 +40,11 @@
 	  									 witem_detail,
 	  									 witem_price 
 	  							  FROM shtp_witem WHERE witem_id='$witem_id'");
-=======
-	  		$ewitem = ("SELECT 	witem_id,
-	  							witem_img,
-	  							witem_type,
-	  							witem_title,
-	  							witem_detail,
-	  							witem_price 
-	  						FROM shtp_witem WHERE witem_id='$witem_id'");
->>>>>>> Stashed changes
+
 	  		$result_ewitem = mysqli_query($con,$ewitem);
 
 	  		$uwitem=("UPDATE shtp_witem
-=======
-<<<<<<< Updated upstream
-	  		mysql_query("UPDATE shtp_witem
-=======
-	  		$ewitem = ("SELECT 	witem_id,
-	  							witem_img,
-	  							witem_type,
-	  							witem_title,
-	  							witem_detail,
-	  							witem_price 
-	  						FROM shtp_witem WHERE witem_id='$witem_id'");
-	  		$result_ewitem = mysqli_query($con,$ewitem);
 
-	  		$uwitem=("UPDATE shtp_witem
->>>>>>> Stashed changes
->>>>>>> ery
 	  					 SET 	witem_img		=	'$witem_img',
 	  							witem_type 		=	'$witem_type',
 	  							witem_title 	=	'$witem_title',
@@ -96,7 +71,3 @@
 	  		mysqli_close($con);
 		}
 	}
-<<<<<<< HEAD
-=======
-?>
->>>>>>> ery
