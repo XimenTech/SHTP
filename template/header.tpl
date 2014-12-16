@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>主页</title>
+		<title>{$title}</title>
 		<!-- 引入css样式表 -->
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/style_main.css" type="text/css" rel="stylesheet">
