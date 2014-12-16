@@ -28,7 +28,7 @@
 		</div>
 		<div id="page2" style="display:none">
 			<b id="page">2/3</b>
-			{section name=item loop=$hotitem_main start=6 max=5}
+			{section name=item loop=$hotitem_main start=5 max=5}
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
@@ -38,7 +38,7 @@
 		</div>
 		<div id="page3" style="display:none">
 			<b id="page">3/3</b>
-			{section name=item loop=$hotitem_main start=11 max=5}
+			{section name=item loop=$hotitem_main start=10 max=5}
 			<div class="hot_item">
 				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
 				<p>&nbsp{$hotitem_main[item].item_title}</p>
@@ -57,54 +57,20 @@
 	<div id="new">
 		<div style="height:1em;"><b id="new_title">最新上架</b></div>
 		<br>
-		<div class="new_item">
+		{section name=new loop=$newitem_main}
+		<div class="new_item" >
 			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
+				<img class="new_img" src="resource/image/{$newitem_main[new].item_img}">
 			</div>
 			<div style="padding-left:1em;">
-				商品名称<br>
+				{$newitem_main[new].item_title}<br>
 				detail
 			</div>
 			<div style="padding-left:5em;">
-				价格
+				{$newitem_main[new].item_price}
 			</div>
 		</div>
-		<div class="new_item">
-			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
-			</div>
-			<div style="padding-left:1em;">
-				商品名称<br>
-				detail
-			</div>
-			<div style="padding-left:5em;">
-				价格
-			</div>
-		</div>
-		<div class="new_item">
-			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
-			</div>
-			<div style="padding-left:1em;">
-				商品名称<br>
-				detail
-			</div>
-			<div style="padding-left:5em;">
-				价格
-			</div>	
-		</div>
-		<div class="new_item">
-			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
-			</div>
-			<div style="padding-left:1em;">
-				商品名称<br>
-				detail
-			</div>
-			<div style="padding-left:5em;">
-				价格
-			</div>
-		</div>
+		{/section}
 	</div>	
 </div>
 

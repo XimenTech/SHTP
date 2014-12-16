@@ -54,7 +54,7 @@
 	  									 witem_detail,
 	  									 witem_price 
 	  							  FROM shtp_witem WHERE witem_id='$witem_id'");
-
+	  		GLOBAL $result_ewitem;
 	  		$result_ewitem = mysqli_query($con,$ewitem);
 
 	  		$uwitem=("UPDATE shtp_witem
@@ -66,6 +66,7 @@
 	  							witem_price 	=	'$witem_price'
 
 	  					 WHERE witem_id = '$witem_id' ");
+	  		GLOBAL $reslut_uwitem;
 	  		$reslut_uwitem = mysqli_query($con,$uwitem)
 			or die('修改求购商品失败！');
 			echo "修改求购商品成功！";
@@ -100,6 +101,7 @@
 	  						  witem_price 
 	  						FROM shtp_witem WHERE witem_id='$witem_id'");
 	  		$result_vwitem = mysqli_query($con,$vwitem);
+	  		GLOBAL $vwitem;
 	  		$vwitem_data = mysqli_fetch_array($result_vwitem);
 		}
 	}

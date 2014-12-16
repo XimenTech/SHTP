@@ -32,13 +32,6 @@
 			}elseif ( isset($_GET['static']) ){
 				require_once('view/v_'.$_GET['static'].'.php');
 			}else{
-				GLOBAL $action;
-				$action = "hotitem";
-				require_once('controller/c_item.php');
-				$c_item = new c_item();
-				$c_item->invoke();
-				// $c_item->newitem();sss
-
 				require_once('view/v_main.php');
 			}
 		}

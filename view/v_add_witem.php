@@ -16,6 +16,7 @@
 	$wadditem->assign("item_detail",$witem_detail);
 	
 
-    $wadditem->display("template/header.tpl");
-	$wadditem->display("template/add_witem.tpl");
-	$wadditem->display("template/footer.tpl");
+
+    require_once('view/v_header.php');
+    $wadditem->display("template/add_witem.tpl");
+    require_once('view/v_footer.php');
