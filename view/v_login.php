@@ -5,6 +5,9 @@
 
    $login = new smarty();
 
-   $login->display("template/header.tpl");
+   GLOBAL $page_title;
+   $page_title="登录";
+
+   require_once('view/v_header.php');
    $login->display("template/login.tpl");
    $login->display("template/footer.tpl");

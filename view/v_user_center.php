@@ -33,6 +33,9 @@
 	$user_center->assign("phone",$phone);
 	$user_center->assign("address",$address);
 
+	GLOBAL $page_title;
+	$page_title="我的二手";
+
 	require_once('view/v_header.php');
 	$user_center->display("template/user_center.tpl");
 	$user_center->display("template/footer.tpl");
