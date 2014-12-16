@@ -51,7 +51,7 @@
 
 			if (mysqli_num_rows($data) == 1){
 				$row = mysqli_fetch_array($data);
-				session_start();
+				//session_start();
 				$_SESSION['user_id'] = $row['user_id'];
 				$_SESSION['user_email'] = $row['user_email'];
 				$_SESSION['user_name'] = $row['user_name'];
@@ -72,7 +72,6 @@
 				setcookie('user_phone',$row['user_phone']);
 				setcookie('user_address',$row['user_address']);
 				setcookie('user_reg_date',$row['user_reg_date']);
-
 
 				echo json_encode(array('flag' => 1, 'msg' => '登陆成功'));
 
@@ -151,6 +150,32 @@
 		}
 
 		public function logout(){ 
+			if (isset($_SESSION['user_ID'])) {
+    			// Delete the session vars by clearing the $_SESSION array
+    			$_SESSION = array();
 
+    			// Delete the session cookie by setting its expiration to an hour ago (3600)
+    			if (isset($_COOKIE[session_name()])) {
+      				setcookie(session_name(), '', time() - 3600);
+    			}
+
+    			// Destroy the session
+				session_destroy();
+			}
+
+			// Delete the user ID and username cookies by setting their expirations to an hour ago (3600)
+  			setcookie('user_id', '', time() - 3600);
+	 		setcookie('user_email', '', time() - 3600);
+	  		setcookie('user_username', '', time() - 3600);
+    		setcookie('user_authority', '', time() - 3600);
+    		setcookie('user_address', '', time() - 3600);
+    		setcookie('user_phone', '', time() - 3600);
+    		setcookie('user_qq', '', time() - 3600);
+    		setcookie('user_status', '', time() - 3600);
+    		setcookie('user_avatar', '', time() - 3600);
+    		setcookie('user_reg_date', '', time() - 3600);
+    		// Redirect to the home page
+    		header('Location: ../index.php' );
 		}
+
 	}
