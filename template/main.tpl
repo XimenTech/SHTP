@@ -71,7 +71,7 @@
 			</div>
 			<div style="padding-left:1em;">
 				{$newitem_main[new].item_title}<br>
-				detail
+				{$newitem_main[new].item_detail}
 			</div>
 			<div style="padding-left:5em;">
 				{$newitem_main[new].item_price}
