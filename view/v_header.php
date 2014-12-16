@@ -8,6 +8,7 @@
 	else{
 		$index->assign("sign",'0');
 	}
+	$index->assign("user_name",$_SESSION['user_name']);
 	GLOBAL $hotitem_main;
 	$index->assign("hotitem_main",$hotitem_main);
 	$index->display("template/header.tpl");	
