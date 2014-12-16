@@ -37,7 +37,6 @@
 	  			$hotitem_main[]=$row;
 	  			$sum++;
 	  		}
-	  		print_r($hotitem_main);	
 	  		mysqli_close($con);
 		}
  

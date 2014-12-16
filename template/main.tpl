@@ -18,88 +18,33 @@
 			</div>	
 		<div id="page1" style="display:block">
 			<b id="page">1/3</b>
+			{section name=item loop=$hotitem_main max=5}
 			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[0][item_img]}">
-				<p>{$arr[0][item_title]}</p>
-				<p>{$arr[0][item_price]}</p>
+				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
+				<p>&nbsp{$hotitem_main[item].item_title}</p>
+				<p>&nbsp{$hotitem_main[item].item_price}</p>
 			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[1][item_img]}">
-				<p>{$arr[1][item_title]}</p>
-				<p>{$arr[1][item_title]}</p>
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[2][item_img]}">
-				<p>{$arr[2][item_title]}</p>
-				<p>{$arr[2][item_title]}</p>
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[3][item_img]}">
-				<p>{$arr[3][item_title]}</p>
-				<p>{$arr[3][item_title]}</p> 
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[4][item_img]}">
-				<p>{$arr[4][item_title]}</p>
-				<p>{$arr[4][item_title]}</p>
-			</div>
+			{/section}
 		</div>
 		<div id="page2" style="display:none">
 			<b id="page">2/3</b>
+			{section name=item loop=$hotitem_main start=6 max=5}
 			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[5][item_img]}">
-				<p>{$arr[5][item_title]}</p>
-				<p>{$arr[5][item_title]}</p>
-
+				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
+				<p>&nbsp{$hotitem_main[item].item_title}</p>
+				<p>&nbsp{$hotitem_main[item].item_price}</p>
 			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[6][item_img]}">
-				<p>{$arr[6][item_title]}</p>
-				<p>{$arr[6][item_title]}</p>
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[7][item_img]}">
-				<p>{$arr[7][item_title]}</p>
-				<p>{$arr[7][item_title]}</p>
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[8][item_img]}">
-				<p>{$arr[8][item_title]}</p>
-				<p>{$arr[8][item_title]}</p>
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[9][item_img]}">
-				<p>{$arr[9][item_title]}</p>
-				<p>{$arr[9][item_title]}</p>
-				</div>
-				</div>
+			{/section}
+		</div>
 		<div id="page3" style="display:none">
 			<b id="page">3/3</b>
+			{section name=item loop=$hotitem_main start=11 max=5}
 			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[10][item_img]}">
-				<p>{$arr[10][item_title]}</p>
-				<p>{$arr[10][item_title]}</p>
+				<img class="hot_img" src="resource/image/{$hotitem_main[item].item_img}">
+				<p>&nbsp{$hotitem_main[item].item_title}</p>
+				<p>&nbsp{$hotitem_main[item].item_price}</p>
 			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[11][item_img]}">
-				<p>{$arr[11][item_title]}</p>
-				<p>{$arr[11][item_title]}</p>
-				</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[12][item_img]}">
-				<p>{$arr[12][item_title]}</p>
-				<p>{$arr[12][item_title]}</p>
-				</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[13][item_img]}">
-				<p>{$arr[13][item_title]}</p>
-				<p>{$arr[13][item_title]}</p>
-			</div>
-			<div class="hot_item">
-				<img class="hot_img" src="resource/image/{$arr[14][item_img]}">
-				<p>{$arr[14][item_title]}</p>
-				<p>{$arr[14][item_title]}</p>
-			</div>
+			{/section}
 		</div>
 	</div>
 	
