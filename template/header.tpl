@@ -19,8 +19,13 @@
 	<body>
 		<!-- 页面顶部板块 -->
 		<div id = "top">
+<<<<<<< HEAD
 			<div id = "top_item_login"><a class = "menu_list">亲，请登录！</a></div>
 			<div id = "top_item_signup"><a class = "menu_list">立即免费注册</a></div>
+=======
+			<div id = "top_item_login"><a class = "menu_list" href="index.php?static=login">亲，请登录！</a></div>
+			<div id = "top_item_signup"><a class = "menu_list" href="index.php?static=signup">立即免费注册</a></div>
+>>>>>>> ery
 			<div id = "top_item_my"><a class = "menu_list">我的二手</a></div>
 			<div id = "top_item_favor"><a class = "menu_list">收藏夹</a></div>
 			<div id = "top_item_quick"><a class = "menu_list">快速发布</a></div>

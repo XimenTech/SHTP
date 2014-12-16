@@ -3,7 +3,6 @@
 	class m_user{
 		public function signup(){
 			require_once('include/user.class.php');
-
 			//获取数据库连接变量
 			require_once('include/connectvars.php');
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
@@ -151,4 +150,8 @@
 				
 			mysqli_close($dbc);
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> ery
 	}
