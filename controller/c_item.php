@@ -19,6 +19,12 @@
 					$this->model = new m_item();
 					$this->model->hotitem();
 					break;
+
+				case 'newitem':
+					require_once('model/m_item.php');
+					$this->model = new m_item();
+					$this->model->newitem();
+					break;
 					
 				case 'edititem':
 					require_once('model/m_item.php');
@@ -32,4 +38,6 @@
 					break;
 			}
 		}
+
+	}
 ?>
