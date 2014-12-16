@@ -150,7 +150,7 @@
 		}
 
 		public function logout(){ 
-			if (isset($_SESSION['user_ID'])) {
+			if (isset($_SESSION['user_id'])) {
     			// Delete the session vars by clearing the $_SESSION array
     			$_SESSION = array();
 
@@ -174,8 +174,6 @@
     		setcookie('user_status', '', time() - 3600);
     		setcookie('user_avatar', '', time() - 3600);
     		setcookie('user_reg_date', '', time() - 3600);
-    		// Redirect to the home page
-    		header('Location: ../index.php' );
 		}
 
 	}
