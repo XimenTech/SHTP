@@ -17,6 +17,7 @@
 	$viewitem->assign("item_img",$item_img);
 	$viewitem->assign("item_price",$item_price);
 
-    $viewitem->display("template/header.tpl");
-	$viewitem->display("template/add_item.tpl");
-	$viewitem->display("template/footer.tpl");
+
+	require_once('view/v_header.php');
+    $viewitem->display("template/add_item.tpl");
+    require_once('view/v_footer.php');

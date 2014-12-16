@@ -17,37 +17,45 @@
     // $item_price = '1.00';
 	$viewitem = new smarty();
     
-    GLOBAL $item_title;
-    GLOBAL $item_id;
-    GLOBAL $item_status;
-    GLOBAL $item_img;
-    GLOBAL $item_type;
-    GLOBAL $item_detail;
-    GLOBAL $item_owner_qq;
-    GLOBAL $item_owner_phone;
-    GLOBAL $item_owner_address;
-    GLOBAL $item_viewtime;
-    GLOBAL $item_dttm;
-    GLOBAL $item_price;
-    GLOBAL $user_id;
+    GLOBAL $item;
+     $vitem_data['item_title'];
+     $vitem_data['item_id'];
+     $vitem_data['item_status'];
+     $vitem_data['item_img'];
+     $vitem_data['item_type'];
+     $vitem_data['item_detail'];
+     $vitem_data['item_owner_qq'];
+     $vitem_data['item_owner_phone'];
 
-    
-	$viewitem->assign("items_title",$item_title);
-	$viewitem->assign("item_id",$item_id);
-	$viewitem->assign("item_status",$item_status);
-	$viewitem->assign("item_img",$item_img);
-	$viewitem->assign("item_type",$item_type);
-	$viewitem->assign("item_detail",$item_detail);
-	$viewitem->assign("item_owner_qq",$item_owner_qq);
-	$viewitem->assign("item_owner_phone",$item_owner_phone);
-	$viewitem->assign("item_owner_address",$item_owner_address);
-	$viewitem->assign("item_viewtime",$item_viewtime);
-	$viewitem->assign("item_dttm",$item_dttm);
-	$viewitem->assign("item_price",$item_price);
-	$viewitem->assign("item_price",$user_id);
-    
-    if()
+     $vitem_data['item_owner_address'];
+      $vitem_data['item_viewtime'];
+       $vitem_data['item_dttm'];
+        $vitem_data['$item_price'];
 
-    $viewitem->display("template/header.tpl");
+
+    $viewitem->assing("title",$title);
+	$viewitem->assign("items_title",$vitem_data['item_title']);
+	$viewitem->assign("item_id",$vitem_data['item_id']);
+	$viewitem->assign("item_status",$vitem_data['item_status']);
+	$viewitem->assign("item_img",$vitem_data['item_img']);
+	$viewitem->assign("item_type",$vitem_data['item_type']);
+	$viewitem->assign("item_detail",$vitem_data['item_detail']);
+	$viewitem->assign("item_owner_qq",$vitem_data['item_owner_qq']);
+	$viewitem->assign("item_owner_phone",$vitem_data['item_owner_phone']);
+	$viewitem->assign("item_owner_address",$vitem_data['item_owner_address']);
+	$viewitem->assign("item_viewtime", $vitem_data['item_viewtime']);
+	$viewitem->assign("item_dttm",$vitem_data['item_dttm']);
+	$viewitem->assign("item_price",$vitem_data['$item_price']);
+	// $viewitem->assign("item_price",$user_id);
+    
+    if($user_id==$_SESSION['user_id']){
+        $viewitem->assign('flag',1);
+    }
+    else{
+        $viewitem->assign('flag',0);
+    }
+
+    require_once('view/v_header.php');
+    
 	$viewitem->display("template/view_item.tpl");
-	$viewitem->display("template/footer.tpl");
+	require_once('view/v_footer.php');
