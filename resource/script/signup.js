@@ -92,7 +92,6 @@ default:
 Lcolor=Mcolor=Hcolor=H_color;  
 }  
 }  
-
 if(pwd.length>=6&&pwd.length<=20){
 document.getElementById("strength_L").style.background=Lcolor;  
 document.getElementById("strength_M").style.background=Mcolor;  
@@ -109,4 +108,31 @@ document.getElementById("strength_M").style.background=O_color;
 document.getElementById("strength_H").style.background=O_color;  
 }
 return;  
-}  
+}
+
+function ajax_signup(){
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+
+  var email = document.signup_form.email.value;
+  var password = document.signup_form.password.value;
+
+  xmlhttp.open("POST","index.php",true);
+  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  xmlhttp.send("email=111111&password=222222");
+
+} 
