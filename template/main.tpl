@@ -57,54 +57,20 @@
 	<div id="new">
 		<div style="height:1em;"><b id="new_title">最新上架</b></div>
 		<br>
-		<div class="new_item">
+		{section name=new loop=$newitem_main}
+		<div class="new_item" >
 			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
+				<img class="new_img" src="resource/image/{$newitem_main[new].item_img}">
 			</div>
 			<div style="padding-left:1em;">
-				商品名称<br>
+				{$newitem_main[new].item_title}<br>
 				detail
 			</div>
 			<div style="padding-left:5em;">
-				价格
+				{$newitem_main[new].item_price}
 			</div>
 		</div>
-		<div class="new_item">
-			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
-			</div>
-			<div style="padding-left:1em;">
-				商品名称<br>
-				detail
-			</div>
-			<div style="padding-left:5em;">
-				价格
-			</div>
-		</div>
-		<div class="new_item">
-			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
-			</div>
-			<div style="padding-left:1em;">
-				商品名称<br>
-				detail
-			</div>
-			<div style="padding-left:5em;">
-				价格
-			</div>	
-		</div>
-		<div class="new_item">
-			<div style="width:20%; height:100%;">
-				<img class="new_img" src="resource/image/recently.png">
-			</div>
-			<div style="padding-left:1em;">
-				商品名称<br>
-				detail
-			</div>
-			<div style="padding-left:5em;">
-				价格
-			</div>
-		</div>
+		{/section}
 	</div>	
 </div>
 
