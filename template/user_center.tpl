@@ -37,7 +37,7 @@
 					
 				</div>
 				<div id = "content_detail_list2">
-					<form enctype="multipart/form-data" action="test_user_center_rslt.php" method="post" name="user_center_myinfo_form">
+					<form enctype="multipart/form-data" action="index.php?controller=c_user&action=edit_profile" method="post" name="user_center_myinfo_form">
 						<p>当前头像：<img src="resource/image/defalut_icon.jpg" width="100" height="100"></p>
 						<p id="content_detail_list2_item">修改头像：<input type="hidden" name="MAX_FILE_SIZE" value="3276800"/>
 	<input type="file" id="headportrait" name="avater" onchange="previewImage(this)"/></p>
