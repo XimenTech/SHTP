@@ -26,7 +26,13 @@
 				case 'edit_profile':
 					require_once('model/m_user.php');
 					$this->model = new m_user();
-					$this->model->user_edit_profile();
+					$this->model->edit_profile();
+					break;
+
+				case 'logout':
+					require_once('model/m_user.php');
+					$this->model = new m_user();
+					$this->model->logout();
 					break;
 
 			}
