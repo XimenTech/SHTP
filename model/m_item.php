@@ -135,7 +135,7 @@
 			require_once('include/connectvars.php'); 
 			$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 			or die('连接数据库失败！');
-			$item_id 	=	$_POST['item_id'];
+			$item_id 	=	$_GET['item_id'];
 	  		$ditem = "DELETE FROM shtp_item WHERE item_id='$item_id' ";
 	  		$result = mysqli_query($con,$ditem)
 	  		or die('删除商品失败！');

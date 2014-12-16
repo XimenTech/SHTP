@@ -37,7 +37,11 @@
 					break;
 
 				case 'removeitem':
-					require_once('view/v_view_item.php');
+				echo 'in action remove item';
+					require_once('model/m_item.php');
+					$this->model = new m_item();
+					$this->model->removeitem();
+					header('Location:index.php');
 					break;
 			}
 		}

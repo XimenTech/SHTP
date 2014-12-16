@@ -35,7 +35,6 @@
 	$viewitem->assign("item_dttm",$vitem_data['item_dttm']);
 	$viewitem->assign("item_price",$vitem_data['item_price']);
 
-
     if(isset($_SESSION['user_id'])){
        if($vitem_data['user_id']==$_SESSION['user_id']){
             $viewitem->assign('flag',1);

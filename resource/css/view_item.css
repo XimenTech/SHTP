@@ -26,10 +26,10 @@
 
 #sys_info{
 	margin-left: 20em;
-	/*background-color: lightgreen;*/
+/*	background-color: lightgreen;*/
     position: relative;
-	width: 60em;
-	height: 15em;
+	width: 85em;
+	height: 5em;
 	text-align: left;
 }
 

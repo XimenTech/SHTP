@@ -26,12 +26,13 @@
 	                 <p>结束时间：{$item_dttm}</p>
 
 	           </div>
-               <div>
-               	{if ({flag==1})}{
-	            <button onclick="index.php?controller=c_item&action=removeitem&item_id=$item_id" >删除商品 
+	           {if ({$flag}==1)}
+               <div style="margin-left:45em;margin-top:2em;">
+               	
+	            <button onclick="javascript:window.location.href='index.php?controller=c_item&action=removeitem&item_id={$item_id}'" >删除商品 
 	             </button>
-           }
+	         	</div>
                 {/if}
-               </div>
+               
 		</div>
 		
