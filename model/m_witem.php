@@ -93,12 +93,7 @@
 			or die('连接数据库失败！');
 
 			$viewwitem_id = $_GET['witem_id'];
-			$vwitem = ("SELECT witem_id,
-	  						  witem_img,
-	  						  witem_type,
-	  						  witem_title,
-	  						  witem_detail,
-	  						  witem_price 
+			$vwitem = ("SELECT *
 	  						FROM shtp_witem WHERE witem_id='$witem_id'");
 	  		$result_vwitem = mysqli_query($con,$vwitem);
 	  		GLOBAL $vwitem;
