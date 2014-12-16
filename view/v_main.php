@@ -9,7 +9,7 @@
 	$index = new smarty();
 
 	require_once('view/v_header.php');
-
+	$index->assign("title",'主页');
 	$index->display("template/main.tpl");
 	require_once('view/v_footer.php');
 ?>
