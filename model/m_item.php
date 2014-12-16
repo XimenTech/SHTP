@@ -43,8 +43,8 @@
 			$myid = $_SESSION['user_id'];
 			$sql = "SELECT item_id,item_img,item_title,item_price FROM shtp_item where user_id = '$user_id'";
 	  		$data = mysqli_query($con,$sql);
-			GLOBAL $hotitem_main;
-	  		$hotitem_main=array();
+			GLOBAL $myitem_main;
+	  		$myitem_main=array();
 	  		while($row = mysqli_fetch_array($data,MYSQL_ASSOC)){ 
 	  			$myitem_main[]=$row;
 	  		}
@@ -77,7 +77,7 @@
 			//获取数据库连接变量
 			$con = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
 			or die('连接数据库失败！');
-	  		$sql = "SELECT item_id,item_img,item_title,item_price FROM shtp_item ORDER BY item_dttm";
+	  		$sql = "SELECT item_id,item_img,item_title,item_detail,item_price FROM shtp_item ORDER BY item_dttm";
 	  		$new_data = mysqli_query($con,$sql);
 	  		GLOBAL $newitem_main;
 	  		$newitem_main=array();
@@ -112,6 +112,7 @@
 	  						  item_price 
 	  						FROM shtp_item WHERE item_id='$item_id'");
 	  		$result_eitem = mysqli_query($con,$eitem);
+	  		GLOBAL $eitem_data;
 	  		$eitem_data = mysqli_fetch_array($result_eitem);
 	  		$uitem=("UPDATE shtp_item
 	  					 SET 	item_img	=	'$item_img',
@@ -123,6 +124,7 @@
 	  					 WHERE item_id='$item_id' ");
 	  		$result_uitem = mysqli_query($con,$uitem)
 			or die('修改商品失败！');
+			GLOBAL $uitem_data;
 			$uitem_data = mysql_fetch_array($result_uitem);
 			echo "修改商品成功！";
 			mysqli_close($con);
@@ -157,6 +159,7 @@
 	  						  item_price 
 	  						FROM shtp_item WHERE item_id='$viewitem_id'");
 	  		$result_vitem = mysqli_query($con,$vitem);
+	  		GLOBAL $vitem_data;
 	  		$vitem_data = mysqli_fetch_array($result_vitem);
 		}
 	}

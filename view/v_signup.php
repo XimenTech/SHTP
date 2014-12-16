@@ -5,6 +5,9 @@
 
    $signup = new smarty();
 
-   $signup->display("template/header.tpl");
+   GLOBAL $page_title;
+   $page_title="注册";
+
+   require_once('view/v_header.php');
    $signup->display("template/signup.tpl");
    $signup->display("template/footer.tpl");
