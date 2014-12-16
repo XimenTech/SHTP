@@ -9,6 +9,7 @@
 	else{
 		$index->assign("sign",'0');
 	}
+	$index->assign('user_name','sdad');
 
 	GLOBAL $hotitem_main;
 	$index->assign("hotitem_main",$hotitem_main);
