@@ -7,18 +7,18 @@
 					require_once('model/m_witem.php');
 					$this->model = new m_witem();
 					$this->model->addwitem();
-					require_once('view/v_viewwitem.php');
+					require_once('view/v_view_item.php');
 					break;
 
 				case 'edit_witem':
 					require_once('model/m_witem.php');
 					$this->model = new m_witem();
 					$this->model->editwitem();
-					require_once('view/v_viewwitem.php');
+					require_once('view/v_view_item.php');
 					break;
 
 				case 'removewitem':
-					require_once('view/v_viewwitem.php');
+					require_once('view/v_view_item.php');
 					break;
 			}
 		}
