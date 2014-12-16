@@ -21,13 +21,13 @@
 					//新用户写入数据库
 
 					$result = mysqli_query($dbc,$query)
-						or die('fail');
-					//注册成功
-					echo '创建账户成功';
+						or die('插入用户信息失败！');
+					//注册成功>
+					echo json_encode(array('flag' => 1, 'msg' => '创建账户成功'));
 
 					
 				}else{
-					echo '用户名已存在';
+					echo json_encode(array('flag' => 0, 'msg' => '用户名已存在' ));
 				}		
 
 			mysqli_close($dbc);
