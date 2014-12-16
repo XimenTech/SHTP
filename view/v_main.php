@@ -6,6 +6,8 @@
 		$index->assign("sign",'1');
 	else
 		$index->assign("sign",'0');
+	GLOBAL $hotitem_main;
+	$index->assign("hotitem_main",$hotitem_main);
 	$index->display("template/header.tpl");	
 	$index->display("template/main.tpl");
 	$index->display("template/footer.tpl");
