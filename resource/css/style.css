@@ -43,7 +43,7 @@ a.menu_list:hover{
 
 #top_item_uesrname{
 	position: relative;
-	width: 7em;
+	width: 5em;
 	height: 2em;
 	margin-top: 0.4em;
 	margin-left: 13em;
@@ -51,10 +51,10 @@ a.menu_list:hover{
 }
 #top_item_logout{
 	position: relative;
-	width: 7em;
+	width: 3em;
 	height: 2em;
 	margin-top: 0.4em;
-	margin-left: 13em;
+	margin-left: 4em;
 	color: #FF0000;
 }
 

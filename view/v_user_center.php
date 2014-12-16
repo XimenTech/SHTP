@@ -33,6 +33,6 @@
 	$user_center->assign("phone",$phone);
 	$user_center->assign("address",$address);
 
-	$user_center->display("template/header.tpl");
+	require_once('view/v_header.php');
 	$user_center->display("template/user_center.tpl");
 	$user_center->display("template/footer.tpl");
