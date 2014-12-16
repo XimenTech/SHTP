@@ -155,7 +155,7 @@
 	  						  item_title,
 	  						  item_detail,
 	  						  item_price 
-	  						FROM shtp_item WHERE item_id='$item_id'");
+	  						FROM shtp_item WHERE item_id='$viewitem_id'");
 	  		$result_vitem = mysqli_query($con,$vitem);
 	  		$vitem_data = mysqli_fetch_array($result_vitem);
 		}

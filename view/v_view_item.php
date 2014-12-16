@@ -17,23 +17,8 @@
     // $item_price = '1.00';
 	$viewitem = new smarty();
     
-    GLOBAL $item;
-     $vitem_data['item_title'];
-     $vitem_data['item_id'];
-     $vitem_data['item_status'];
-     $vitem_data['item_img'];
-     $vitem_data['item_type'];
-     $vitem_data['item_detail'];
-     $vitem_data['item_owner_qq'];
-     $vitem_data['item_owner_phone'];
-
-     $vitem_data['item_owner_address'];
-      $vitem_data['item_viewtime'];
-       $vitem_data['item_dttm'];
-        $vitem_data['$item_price'];
-
-
-    $viewitem->assing("title",$title);
+    GLOBAL $vitem_data;
+    print_r($vitem_data);
 	$viewitem->assign("items_title",$vitem_data['item_title']);
 	$viewitem->assign("item_id",$vitem_data['item_id']);
 	$viewitem->assign("item_status",$vitem_data['item_status']);
@@ -46,12 +31,15 @@
 	$viewitem->assign("item_viewtime", $vitem_data['item_viewtime']);
 	$viewitem->assign("item_dttm",$vitem_data['item_dttm']);
 	$viewitem->assign("item_price",$vitem_data['$item_price']);
-	// $viewitem->assign("item_price",$user_id);
-    
-    if($user_id==$_SESSION['user_id']){
-        $viewitem->assign('flag',1);
-    }
-    else{
+
+
+    if(isset($_SESSION['user_id'])){
+       if($vitem_data['user_id']==$_SESSION['user_id']){
+            $viewitem->assign('flag',1);
+        }else{
+            $viewitem->assign('flag',0);
+        }
+    }else{
         $viewitem->assign('flag',0);
     }
 
