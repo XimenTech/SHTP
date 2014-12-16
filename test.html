@@ -13,7 +13,26 @@ xmlhttp.onreadystatechange=function()
     }
 xmlhttp.open("POST","test.php",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send("email=asdafefa&password=sdfasdf");
+//测试signup
+	//用户已存在
+	//xmlhttp.send("email=Mxx&password=123456");
+	//用户名尚未被注册
+	//xmlhttp.send("email=TangHA&password=123456");
+
+//测试login
+	//用户名不存在的情况
+	//xmlhttp.send("email=FDS&password=123456");
+	//用户名存在，密码错误
+	//xmlhttp.send("email=Mxx&password=1234567");
+	//用户名存在，密码正确
+	//xmlhttp.send("email=Mxx&password=123456");
+
+//测试profile
+	//未修改用户全部信息
+
+	xmlhttp.send("name=Maohaowen&qq=1234567&phone=18625803935&address=asdasdcx");
+	//修改了用户全部信息
+	//xmlhttp.send("email=Mxx&password=123456&qq=12312413&phone=18523458713&name=Maohaowen");
 
 }
 </script>
