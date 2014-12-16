@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>{$page_title}</title>
 		<!-- 引入css样式表 -->
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
@@ -41,7 +42,7 @@
 		<!-- 主板块 -->
 		<div id = "main">
 			<!-- 页面logo板块 -->
-			<div id = "main_logo"><a href="index.php?static=main"><img src="resource/image/logo.png"></a></div>
+			<a href="index.php?static=main"><div id = "main_logo"><img src="resource/image/logo.png"></div></a>
 			<!-- 页面搜索板块 -->
 			<div id = "main_search" style="background-image:url(resource/image/search.png)">
 				<div id = "main_search_item1"><b>寻宝:</b></div>
