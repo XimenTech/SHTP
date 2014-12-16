@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>主页</title>
+		<title>{$page_title}</title>
 		<!-- 引入css样式表 -->
 		<link href="resource/css/style.css" type="text/css" rel="stylesheet">
 		<link href="resource/css/style_main.css" type="text/css" rel="stylesheet">
@@ -26,9 +26,8 @@
 				<div id = "top_item_login"><a class = "menu_list" href="index.php?static=login">亲，请登录！</a></div>
 				<div id = "top_item_signup"><a class = "menu_list" href="index.php?static=signup">立即免费注册</a></div>
 			{else}
-				<div id="top_item_uesrname">
-					尊敬的
-					<a class = "menu_list" href="index.php?controller=c_user&action=user_center">{$user_name}</a></div>!
+				<div id="top_item_uesrname">尊敬的<a class = "menu_list" href="index.php?controller=c_user&action=user_center">{$user_name}</a>
+				</div>
 				<div id = "top_item_logout"><a class = "menu_list" href="index.php?controller=c_user&action=logout">注销</a></div>
 			{/if}
 			<div id = "top_item_my"><a class = "menu_list" href="index.php?controller=c_user&action=user_center">我的二手</a></div>

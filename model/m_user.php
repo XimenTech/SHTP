@@ -104,16 +104,16 @@
 			//$avatar		=	$_POST['avatar'];
 			//	echo $_POST['name'];
 			$id 		=	$_SESSION['user_id'];
-			$avatar		= 	$_FILES['avatar']['name'];
-			$avatar_type= 	$_FILES['avatar']['type'];
-			$avatar_size= 	$_FILES['avatar']['size'];
+		//	$avatar		= 	$_FILES['avatar']['name'];
+		//	$avatar_type= 	$_FILES['avatar']['type'];
+		//	$avatar_size= 	$_FILES['avatar']['size'];
 
 			$name		=	$_POST['name'];
 			$qq			=	$_POST['qq'];
 			$phone		=	$_POST['phone'];
 			$address	=	$_POST['address'];
 
-			if (!empty($avatar)){
+		/*	if (!empty($avatar)){
 				if ((($avatar_type == 'image/gif') 	|| 
 					 ($avatar_type == 'image/jpeg') || 
 					 ($avatar_type == 'image/pjpeg')|| 
@@ -126,10 +126,10 @@
 		
 
 						$target = HEADPORTRAIT_PATH. $avatar;
-						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
+						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);*/
 
 						//$query = "UPDATE tc_users SET user_head_portrait = '$hp' WHERE user_ID = $temp";
-						$query = "UPDATE shtp_user SET 	user_avatar		= '$avatar',
+						$query = "UPDATE shtp_user SET 	/*user_avatar		= '$avatar',*/
 														user_name 		= '$name',
 														user_qq			= '$phone',
 														user_phone		= '$phone',
@@ -139,18 +139,18 @@
 							or die('fail');
 						echo "修改成功";
 
-				}else{
+				/*}else{
 					echo '类型或大小错误';
 				}
 			}else{
 				echo '未选择文件';
-			}	
+			}	*/
 				
 			mysqli_close($dbc);
 		}
 
 		public function logout(){ 
-			if (isset($_SESSION['user_ID'])) {
+			if (isset($_SESSION['user_id'])) {
     			// Delete the session vars by clearing the $_SESSION array
     			$_SESSION = array();
 
@@ -174,8 +174,6 @@
     		setcookie('user_status', '', time() - 3600);
     		setcookie('user_avatar', '', time() - 3600);
     		setcookie('user_reg_date', '', time() - 3600);
-    		// Redirect to the home page
-    		header('Location: ../index.php' );
 		}
 
 	}
