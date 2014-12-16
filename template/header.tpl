@@ -30,7 +30,11 @@
 				</div>
 				<div id = "top_item_logout"><a class = "menu_list" href="index.php?controller=c_user&action=logout">注销</a></div>
 			{/if}
-			<div id = "top_item_my"><a class = "menu_list" href="index.php?controller=c_user&action=user_center">我的二手</a></div>
+			{if {$sign} == 0}
+				<div id = "top_item_my"><a class = "menu_list" href="index.php?static=login">我的二手</a></div>
+			{else}
+				<div id = "top_item_my"><a class = "menu_list" href="index.php?controller=c_user&action=user_center">我的二手</a></div>
+			{/if}
 			<div id = "top_item_favor"><a class = "menu_list">收藏夹</a></div>
 			<div id = "top_item_quick"><a class = "menu_list">快速发布</a></div>
 		</div>

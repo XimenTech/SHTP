@@ -27,6 +27,7 @@
 					require_once('model/m_user.php');
 					$this->model = new m_user();
 					$this->model->edit_profile();
+					require_once('view/v_user_center.php');
 					break;
 
 				case 'logout':

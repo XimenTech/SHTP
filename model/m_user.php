@@ -99,21 +99,24 @@
 			$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 				or die('连接数据库失败！');
 
-
 			//$authority	=	$_POST['authority'];
 			//$avatar		=	$_POST['avatar'];
 			//	echo $_POST['name'];
 			$id 		=	$_SESSION['user_id'];
-		//	$avatar		= 	$_FILES['avatar']['name'];
-		//	$avatar_type= 	$_FILES['avatar']['type'];
-		//	$avatar_size= 	$_FILES['avatar']['size'];
+
+			if (isset($_FILES)){ 
+					$avatar		= 	$_FILES['avatar']['name'];
+					$avatar_type= 	$_FILES['avatar']['type'];
+					$avatar_size= 	$_FILES['avatar']['size'];
+			}
+
 
 			$name		=	$_POST['name'];
 			$qq			=	$_POST['qq'];
 			$phone		=	$_POST['phone'];
 			$address	=	$_POST['address'];
 
-		/*	if (!empty($avatar)){
+			if (!empty($avatar)){
 				if ((($avatar_type == 'image/gif') 	|| 
 					 ($avatar_type == 'image/jpeg') || 
 					 ($avatar_type == 'image/pjpeg')|| 
@@ -121,16 +124,16 @@
 					 ($avatar_size > 0) 			&& 
 					 ($avatar <= HEADPORTRAIT_MAXFILESIZE)) {
 
-						$avatar = $id;
-
+						//$avatar = $id.".".$avatar_type;
+						$avatar = $id.$avatar;
 		
 
 						$target = HEADPORTRAIT_PATH. $avatar;
-						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);*/
+						move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
 
 						//$query = "UPDATE tc_users SET user_head_portrait = '$hp' WHERE user_ID = $temp";
-						/*user_avatar		= '$avatar',*/
-						$query = "UPDATE shtp_user SET 	
+						
+						$query = "UPDATE shtp_user SET 	user_avatar		= '$avatar',
 														user_name 		= '$name',
 														user_qq			= '$phone',
 														user_phone		= '$phone',
@@ -140,13 +143,25 @@
 							or die('fail');
 						echo "修改成功";
 
-				/*}else{
+				}else{
 					echo '类型或大小错误';
 				}
 			}else{
 				echo '未选择文件';
-			}	*/
-				
+			}	
+
+				$_SESSION['user_name'] = $name;
+				$_SESSION['user_qq'] = $qq;
+				$_SESSION['user_avatar'] = $avatar;
+				$_SESSION['user_phone'] = $phone;
+				$_SESSION['user_address'] = $address;
+				setcookie('user_name',$name);
+				setcookie('user_qq',$qq);
+				setcookie('user_avatar',$avatar);
+				setcookie('user_phone',$phone);
+				setcookie('user_address',$address);
+
+
 			mysqli_close($dbc);
 		}
 
