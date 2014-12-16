@@ -28,7 +28,7 @@
 						<div id = "content_detail_list1_item_detail">物品介绍</div>
 						<div id = "content_detail_list1_item_viewtime">浏览次数</div>
 					</div>
-					{section name=item loop=$myitem_main}
+					{section name=item loop=$myitem_main max=4}
 					<div id="content_detail_list1_item">
 						<div id = "content_detail_list1_item_title">{$myitem_main[item].item_title}</div>
 						<div id = "content_detail_list1_item_img"><img src="resource/image/huabanxie.jpg" width="70" height="50"></div>
