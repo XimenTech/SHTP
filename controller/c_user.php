@@ -33,6 +33,7 @@
 					require_once('model/m_user.php');
 					$this->model = new m_user();
 					$this->model->logout();
+					require_once('view/v_main.php');
 					break;
 
 			}
