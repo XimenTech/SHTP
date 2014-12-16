@@ -10,9 +10,7 @@
 	else{
 		$index->assign("sign",'0');
 	}
-
+	
 	$index->assign("page_title",$page_title);
-	GLOBAL $hotitem_main;
-	$index->assign("hotitem_main",$hotitem_main);
 	$index->display("template/header.tpl");	
 ?>
